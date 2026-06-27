@@ -1,12 +1,11 @@
 /**
- * Emergescale Services Page Interactions
- * Handles: Navbar scroll, Mobile menu drawer, and Project Estimate Configurator
+ * Emergescale About Page Interactions
+ * Handles: Navbar scroll, Mobile menu drawer, and animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- Scroll-driven Header ---
-    const header = document.querySelector('.header');
     const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', () => {
@@ -178,27 +177,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- FAQ Accordion ---
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const questionBtn = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        
-        questionBtn.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+    // --- Smooth Scrolling for Anchor Links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') {
+                e.preventDefault();
+                return;
+            }
             
-            // Close all active items
-            faqItems.forEach(otherItem => {
-                otherItem.classList.remove('active');
-                otherItem.querySelector('.faq-answer').style.maxHeight = '0px';
-            });
-            
-            if (!isActive) {
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
+            // If the anchor is on this page
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
     });
 
-
+    // --- Intersection Observer for Scroll Fade-In ---
+    const fadeSections = document.querySelectorAll('.fade-in-section');
+    
+    const appearOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+    
+    fadeSections.forEach(section => {
+        appearOnScroll.observe(section);
+    });
 });
