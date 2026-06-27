@@ -70,10 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuOverlay.innerHTML = `
         <div class="mobile-menu-card">
             <div class="mobile-menu-header">
-                <div class="logo-icon-text-container">
+                <a href="index.html" class="logo-icon-text-container">
                     <img src="assets/logo.png" alt="ES Logo" class="navbar-logo-img">
                     <span class="navbar-logo-text">EMERGESCALE</span>
-                </div>
+                </a>
                 <button class="mobile-menu-close-btn">&times;</button>
             </div>
             
@@ -132,6 +132,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(mobileMenuOverlay);
 
     const closeBtn = mobileMenuOverlay.querySelector('.mobile-menu-close-btn');
+    const mobileHeaderLogo = mobileMenuOverlay.querySelector('.mobile-menu-header .logo-icon-text-container');
+
+    if (mobileHeaderLogo) {
+        mobileHeaderLogo.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeMobileMenu();
+            transitionOverlay.classList.remove('fade-out');
+            transitionOverlay.classList.add('fade-in');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 400);
+        });
+    }
 
     function openMobileMenu() {
         mobileMenuOverlay.classList.add('active');
