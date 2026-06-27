@@ -464,7 +464,8 @@
 
 .help-contact-info {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
     align-items: center;
 }
 
@@ -606,7 +607,7 @@
 }
 
 /* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .terms-hero {
         padding-top: 8.5rem;
         padding-bottom: 3rem;
@@ -728,7 +729,9 @@
     }
 
     .help-card-content {
+        align-items: center;
         text-align: center;
+        width: 100%;
     }
 
     .help-contact-info {

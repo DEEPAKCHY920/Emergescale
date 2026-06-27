@@ -191,6 +191,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Scroll-triggered Stat Count Animation ---
+    function animateStatCount(element, duration = 1200) {
+        const rawText = element.textContent.trim();
+        const match = rawText.match(/^(-?[\d,.]+)(.*)$/);
+        if (!match) return;
+
+        const numericString = match[1].replace(/,/g, '');
+        const suffix = match[2] || '';
+        const endValue = parseFloat(numericString);
+        if (Number.isNaN(endValue)) return;
+
+        const decimalPlaces = numericString.includes('.') ? numericString.split('.')[1].length : 0;
+        const startValue = 0;
+        const startTime = performance.now();
+
+        const formatValue = (value) => {
+            const formatted = decimalPlaces > 0
+                ? value.toFixed(decimalPlaces)
+                : Math.round(value).toString();
+            return formatted.replace(/\.0+$/, '');
+        };
+
+        const step = (timestamp) => {
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const currentValue = startValue + (endValue - startValue) * progress;
+            element.textContent = formatValue(currentValue) + suffix;
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        };
+
+        requestAnimationFrame(step);
+    }
+
+    function initCountUpAnimation() {
+        const statSelectors = '.stat-number, .about-stat-number, .story-stat-number, .startup-stat-number';
+        const statElements = document.querySelectorAll(statSelectors);
+
+        if (!statElements.length) return;
+
+        const countObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                animateStatCount(entry.target);
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -20px 0px'
+        });
+
+        statElements.forEach(el => countObserver.observe(el));
+    }
+
+    initCountUpAnimation();
+
     // --- FAQ Accordion ---
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
