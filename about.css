@@ -1249,6 +1249,10 @@
         border-right: 1px solid var(--border-color);
     }
 
+    .story-stats-card .story-stat-label {
+        white-space: normal; /* Wrap text on narrow viewports to avoid card overflow */
+    }
+
     .purpose-card {
         padding: 2.5rem 1.8rem;
     }

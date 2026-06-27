@@ -359,12 +359,8 @@ button {
     background: #181614;
     /* Luxury charcoal/black banner background */
     padding: 1.2rem 0;
-    width: 100vw;
+    width: 100%;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
     overflow: hidden;
     display: flex;
     z-index: 15;
@@ -1316,6 +1312,16 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .tech-orbit-container {
+        width: 290px;
+        height: 290px;
+    }
+    .tech-orbit-wrapper {
+        transform: scale(0.41);
     }
 }
 
@@ -2287,6 +2293,7 @@ button {
     width: 100%;
     max-width: 600px;
     height: 100%;
+    overflow: hidden; /* Prevent text overflow from causing horizontal scroll */
 }
 
 .footer-watermark-text {
