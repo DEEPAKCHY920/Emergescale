@@ -21,7 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinksContainer = document.querySelector('.nav-links');
     const mobileToggle = document.createElement('button');
     mobileToggle.className = 'mobile-nav-toggle';
-    mobileToggle.innerHTML = '&#9776;'; // Hamburger icon
+    mobileToggle.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="12" x2="16" y2="12"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+    `;
     navbar.insertBefore(mobileToggle, navbar.lastElementChild); // Insert before the Let's Talk button
 
     // Create mobile menu overlay
