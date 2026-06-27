@@ -184,7 +184,7 @@ button {
     transform: translateX(-50%);
     width: 24px;
     height: 3px;
-    background: var(--text-primary);
+    background: var(--accent-color); /* Orange/gold active page indicator line */
     border-radius: 100px;
 }
 
