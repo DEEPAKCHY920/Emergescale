@@ -22,13 +22,13 @@
     <header class="header">
         <nav class="navbar" id="main-nav">
             <div class="nav-links">
-                <a href="#" class="nav-item active">Home</a>
+                <a href="index.html" class="nav-item active">Home</a>
                 <a href="services.html" class="nav-item">Services</a>
                 <div class="logo-icon-text-container">
                     <img src="assets/logo.png" alt="ES Logo" class="navbar-logo-img">
                     <span class="navbar-logo-text">EMERGESCALE</span>
                 </div>
-                <a href="#portfolio" class="nav-item">About</a>
+                <a href="about.html" class="nav-item">About</a>
                 <a href="#cta" class="nav-item">Contact</a>
             </div>
         </nav>
@@ -472,175 +472,179 @@
                 <p class="section-desc">Modern tools and frameworks we use to build high-performance websites</p>
             </div>
             
-            <div class="tech-grid fade-in-section">
-                <!-- Next.js -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #000000;">
-                        <svg width="36" height="36" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px;">
-                            <mask id="mask-next" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="180">
+            <div class="tech-orbit-container fade-in-section">
+                <!-- Center Node -->
+                <div class="tech-orbit-center">
+                    <div class="tech-orbit-center-inner">
+                        <span class="tech-orbit-center-tag">&lt;/&gt;</span>
+                        <h3 class="tech-orbit-center-title">TECH STACK</h3>
+                        <p class="tech-orbit-center-subtitle">POWERING INNOVATION<br>BUILDING EXPERIENCE</p>
+                    </div>
+                </div>
+
+                <!-- Outer Orbit Path -->
+                <div class="tech-orbit-ring outer-ring">
+                    <!-- Figma -->
+                    <div class="tech-orbit-item" style="--angle: 0deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="Figma">
+                            <svg width="20" height="30" viewBox="0 0 50 75" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 24px;">
+                                <path d="M12.5 75C19.4036 75 25 69.4036 25 62.5V50H12.5C5.59644 50 0 55.5964 0 62.5C0 69.4036 5.59644 75 12.5 75Z" fill="#0ACF83"/>
+                                <path d="M0 37.5C0 30.5964 5.59644 25 12.5 25H25V50H12.5C5.59644 50 0 44.4036 0 37.5Z" fill="#A259FF"/>
+                                <path d="M0 12.5C0 5.59644 5.59644 0 12.5 0H25V25H12.5C5.59644 25 0 19.4036 0 12.5Z" fill="#F24E1E"/>
+                                <path d="M25 0H37.5C44.4036 0 50 5.59644 50 12.5C50 19.4036 44.4036 25 37.5 25H25V0Z" fill="#FF7262"/>
+                                <path d="M50 37.5C50 44.4036 44.4036 50 37.5 50C30.5964 50 25 44.4036 25 37.5C25 30.5964 30.5964 25 37.5 25C44.4036 25 50 30.64 50 37.5Z" fill="#1ABCFE"/>
+                            </svg>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                    <!-- Next.js -->
+                    <div class="tech-orbit-item" style="--angle: 36deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="Next.js">
+                            <svg width="28" height="28" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="90" cy="90" r="90" fill="black" />
-                            </mask>
-                            <g mask="url(#mask-next)">
-                                <circle cx="90" cy="90" r="90" fill="black" />
-                                <path d="M149.508 157.52L69.142 54H54v72h14.4V78.07l66.078 85.08a89.658 89.658 0 0 0 15.03-5.63z" fill="url(#paint-next-1)" />
-                                <rect x="115" y="54" width="14" height="72" fill="url(#paint-next-2)" />
-                            </g>
-                            <defs>
-                                <linearGradient id="paint-next-1" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="white" />
-                                    <stop offset="1" stop-color="white" stop-opacity="0" />
-                                </linearGradient>
-                                <linearGradient id="paint-next-2" x1="122" y1="54" x2="122" y2="126" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="white" />
-                                    <stop offset="1" stop-color="white" stop-opacity="0" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
+                                <path d="M149.508 157.52L69.142 54H54v72h14.4V78.07l66.078 85.08a89.658 89.658 0 0 0 15.03-5.63z" fill="url(#paint-next-orbit-1)" />
+                                <rect x="115" y="54" width="14" height="72" fill="url(#paint-next-orbit-2)" />
+                                <defs>
+                                    <linearGradient id="paint-next-orbit-1" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </linearGradient>
+                                    <linearGradient id="paint-next-orbit-2" x1="122" y1="54" x2="122" y2="126" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" />
+                                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <span>Next.js</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Next.js</span>
-                </div>
-                
-                <!-- React -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #23272F;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#61DAFB" stroke-width="1.5">
-                            <ellipse rx="10" ry="4.5" transform="rotate(0 12 12)" cx="12" cy="12"></ellipse>
-                            <ellipse rx="10" ry="4.5" transform="rotate(60 12 12)" cx="12" cy="12"></ellipse>
-                            <ellipse rx="10" ry="4.5" transform="rotate(120 12 12)" cx="12" cy="12"></ellipse>
-                            <circle cx="12" cy="12" r="2" fill="#61DAFB"></circle>
-                        </svg>
+                    <!-- React -->
+                    <div class="tech-orbit-item" style="--angle: 72deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="React">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#00D8FF" stroke-width="1.8">
+                                <ellipse rx="10" ry="4.5" transform="rotate(0 12 12)" cx="12" cy="12"></ellipse>
+                                <ellipse rx="10" ry="4.5" transform="rotate(60 12 12)" cx="12" cy="12"></ellipse>
+                                <ellipse rx="10" ry="4.5" transform="rotate(120 12 12)" cx="12" cy="12"></ellipse>
+                                <circle cx="12" cy="12" r="2" fill="#00D8FF"></circle>
+                            </svg>
+                            <span>React</span>
+                        </div>
                     </div>
-                    <span class="tech-name">React</span>
-                </div>
-                
-                <!-- TypeScript -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #3178C6;">
-                        <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.1rem; color: white;">TS</span>
+                    <!-- TypeScript -->
+                    <div class="tech-orbit-item" style="--angle: 108deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="TypeScript">
+                            <span class="text-logo" style="color: #3178C6; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.1rem;">TS</span>
+                            <span>TypeScript</span>
+                        </div>
                     </div>
-                    <span class="tech-name">TypeScript</span>
-                </div>
-                
-                <!-- Tailwind CSS -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #0F172A;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.567.89 2.29 1.625 1.178 1.192 2.54 2.575 5.51 2.575 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.567-.89-2.29-1.625-1.178-1.192-2.54-2.575-5.51-2.575zm-6 6c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.567.89 2.29 1.625 1.178 1.192 2.54 2.575 5.51 2.575 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.567-.89-2.29-1.625-1.178-1.192-2.54-2.575-5.51-2.575z" fill="#38BDF8"/>
-                        </svg>
+                    <!-- Tailwind CSS -->
+                    <div class="tech-orbit-item" style="--angle: 144deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="Tailwind CSS">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.567.89 2.29 1.625 1.178 1.192 2.54 2.575 5.51 2.575 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.567-.89-2.29-1.625-1.178-1.192-2.54-2.575-5.51-2.575zm-6 6c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.567.89 2.29 1.625 1.178 1.192 2.54 2.575 5.51 2.575 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.567-.89-2.29-1.625-1.178-1.192-2.54-2.575-5.51-2.575z" fill="#38BDF8"/>
+                            </svg>
+                            <span>Tailwind CSS</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Tailwind CSS</span>
-                </div>
-                
-                <!-- Node.js -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #339933;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L3 7v10l9 5 9-5V7l-9-5zm-1 14.5l-4-2.3v-4.4l4 2.3v4.4zm1-6.1L8 8.1l4-2.3 4 2.3-4 2.3zm5 3.8l-4 2.3v-4.4l4-2.3v4.4z" fill="white"/>
-                        </svg>
+                    <!-- Node.js -->
+                    <div class="tech-orbit-item" style="--angle: 180deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="Node.js">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L3 7v10l9 5 9-5V7l-9-5zm-1 14.5l-4-2.3v-4.4l4 2.3v4.4zm1-6.1L8 8.1l4-2.3 4 2.3-4 2.3-4 2.3zm5 3.8l-4 2.3v-4.4l4-2.3v4.4z" fill="#339933"/>
+                            </svg>
+                            <span>Node.js</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Node.js</span>
-                </div>
-                
-                <!-- PostgreSQL -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #336791;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: white;">
-                            <path d="M12 2a10 10 0 0 0-7.38 3.19C3.12 6.8 2 9.27 2 12c0 4.1 2.5 7.6 6 9 .5-.4 1-.8 1.5-1.2-1.5-.7-2.6-2.1-2.9-3.8 2 .5 4 .5 6 0-.3 1.7-1.4 3.1-2.9 3.8.5.4 1 .8 1.5 1.2 3.5-1.4 6-4.9 6-9 0-2.73-1.12-5.2-2.62-6.81A10 10 0 0 0 12 2zm1 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-2 7H9v-2h2v2zm4 0h-2v-2h2v2z"/>
-                        </svg>
+                    <!-- PostgreSQL -->
+                    <div class="tech-orbit-item" style="--angle: 216deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="PostgreSQL">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: #336791;">
+                                <path d="M12 2a10 10 0 0 0-7.38 3.19C3.12 6.8 2 9.27 2 12c0 4.1 2.5 7.6 6 9 .5-.4 1-.8 1.5-1.2-1.5-.7-2.6-2.1-2.9-3.8 2 .5 4 .5 6 0-.3 1.7-1.4 3.1-2.9 3.8.5.4 1 .8 1.5 1.2 3.5-1.4 6-4.9 6-9 0-2.73-1.12-5.2-2.62-6.81A10 10 0 0 0 12 2zm1 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-2 7H9v-2h2v2zm4 0h-2v-2h2v2z"/>
+                            </svg>
+                            <span>PostgreSQL</span>
+                        </div>
                     </div>
-                    <span class="tech-name">PostgreSQL</span>
-                </div>
-
-                <!-- MongoDB -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #001E2B;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: #13AA52;">
-                            <path d="M12 1.5c-.176 0-.343.08-.435.228C9.376 5.253 8.35 8.92 8.35 12c0 3.328 1.157 7.027 3.284 10.324a.5.5 0 0 0 .866 0c2.127-3.297 3.284-6.996 3.284-10.324 0-3.08-1.026-6.747-3.215-10.272a.5.5 0 0 0-.433-.228h-.136zM12 3v15.9c-1.393-2.584-2.15-5.328-2.15-7.9 0-2.572.757-5.316 2.15-7.9l.001-.1z"/>
-                        </svg>
+                    <!-- MongoDB -->
+                    <div class="tech-orbit-item" style="--angle: 252deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="MongoDB">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: #13AA52;">
+                                <path d="M12 1.5c-.176 0-.343.08-.435.228C9.376 5.253 8.35 8.92 8.35 12c0 3.328 1.157 7.027 3.284 10.324a.5.5 0 0 0 .866 0c2.127-3.297 3.284-6.996 3.284-10.324 0-3.08-1.026-6.747-3.215-10.272a.5.5 0 0 0-.433-.228h-.136zM12 3v15.9c-1.393-2.584-2.15-5.328-2.15-7.9 0-2.572.757-5.316 2.15-7.9l.001-.1z"/>
+                            </svg>
+                            <span>MongoDB</span>
+                        </div>
                     </div>
-                    <span class="tech-name">MongoDB</span>
-                </div>
-
-                <!-- Prisma -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #2D3748;">
-                        <svg width="24" height="24" viewBox="0 0 256 312" fill="white" xmlns="http://www.w3.org/2000/svg" style="width: 22px; height: 22px;">
-                            <path d="M128 0L24.8 59.6v119.2L128 238l103.2-59.2V59.6L128 0zm88.8 168.3L128 219.1V102.9l88.8 50.8v14.6z" />
-                        </svg>
+                    <!-- Prisma -->
+                    <div class="tech-orbit-item" style="--angle: 288deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="Prisma">
+                            <svg width="24" height="24" viewBox="0 0 256 312" fill="#2D3748" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+                                <path d="M128 0L24.8 59.6v119.2L128 238l103.2-59.2V59.6L128 0zm88.8 168.3L128 219.1V102.9l88.8 50.8v14.6z" />
+                            </svg>
+                            <span>Prisma</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Prisma</span>
-                </div>
-
-                <!-- Framer Motion -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #0055FF;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color: white; width: 22px; height: 22px;">
-                            <path d="M0 0h12l12 12H12L0 24V12h12L0 0z" />
-                        </svg>
+                    <!-- Framer Motion -->
+                    <div class="tech-orbit-item" style="--angle: 324deg; --radius: 300px;">
+                        <div class="tech-orbit-card" title="Framer Motion">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color: #0055FF; width: 22px; height: 22px;">
+                                <path d="M0 0h12l12 12H12L0 24V12h12L0 0z" />
+                            </svg>
+                            <span>Framer Motion</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Framer Motion</span>
                 </div>
 
-                <!-- Figma -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #1E1E1E;">
-                        <svg width="20" height="30" viewBox="0 0 50 75" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 24px;">
-                            <path d="M12.5 75C19.4036 75 25 69.4036 25 62.5V50H12.5C5.59644 50 0 55.5964 0 62.5C0 69.4036 5.59644 75 12.5 75Z" fill="#0ACF83"/>
-                            <path d="M0 37.5C0 30.5964 5.59644 25 12.5 25H25V50H12.5C5.59644 50 0 44.4036 0 37.5Z" fill="#A259FF"/>
-                            <path d="M0 12.5C0 5.59644 5.59644 0 12.5 0H25V25H12.5C5.59644 25 0 19.4036 0 12.5Z" fill="#F24E1E"/>
-                            <path d="M25 0H37.5C44.4036 0 50 5.59644 50 12.5C50 19.4036 44.4036 25 37.5 25H25V0Z" fill="#FF7262"/>
-                            <path d="M50 37.5C50 44.4036 44.4036 50 37.5 50C30.5964 50 25 44.4036 25 37.5C25 30.5964 30.5964 25 37.5 25C44.4036 25 50 30.64 50 37.5Z" fill="#1ABCFE"/>
-                        </svg>
+                <!-- Inner Orbit Path -->
+                <div class="tech-orbit-ring inner-ring">
+                    <!-- GitHub -->
+                    <div class="tech-orbit-item" style="--angle: 30deg; --radius: 180px;">
+                        <div class="tech-orbit-card" title="GitHub">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: #24292F;">
+                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                            </svg>
+                            <span>GitHub</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Figma</span>
-                </div>
-
-                <!-- Stripe -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #635BFF;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="width: 20px; height: 20px;"><path d="M13.97 4.53c-1.86-.87-4.14-.52-5.18.73-1.07 1.28-1.07 3.33.02 4.6l3.52 4.1c.73.85.73 2.12-.02 2.94-.74.82-2.14 1-3.23.47l-.36-.18c-1-.53-1.63-1.5-1.63-2.6h-2.3c0 2.22 1.45 4.14 3.52 4.93 1.86.85 4.15.52 5.18-.73 1.07-1.3 1.07-3.33-.02-4.6l-3.52-4.1c-.73-.85-.73-2.12.02-2.94.74-.82 2.14-1 3.23-.47l.36.18c1 .53 1.63 1.5 1.63 2.6h2.3c0-2.22-1.45-4.14-3.52-4.93z"/></svg>
+                    <!-- Stripe -->
+                    <div class="tech-orbit-item" style="--angle: 90deg; --radius: 180px;">
+                        <div class="tech-orbit-card" title="Stripe">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color: #635BFF;"><path d="M13.97 4.53c-1.86-.87-4.14-.52-5.18.73-1.07 1.28-1.07 3.33.02 4.6l3.52 4.1c.73.85.73 2.12-.02 2.94-.74.82-2.14 1-3.23.47l-.36-.18c-1-.53-1.63-1.5-1.63-2.6h-2.3c0 2.22 1.45 4.14 3.52 4.93 1.86.85 4.15.52 5.18-.73 1.07-1.3 1.07-3.33-.02-4.6l-3.52-4.1c-.73-.85-.73-2.12.02-2.94.74-.82 2.14-1 3.23-.47l.36.18c1 .53 1.63 1.5 1.63 2.6h2.3c0-2.22-1.45-4.14-3.52-4.93z"/></svg>
+                            <span>Stripe</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Stripe</span>
-                </div>
-
-                <!-- Shadcn/UI -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #000000;">
-                        <svg width="24" height="24" viewBox="0 0 256 256" fill="white" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
-                            <path d="M208 40L48 200M208 100L100 208" stroke="white" stroke-width="24" stroke-linecap="round" />
-                        </svg>
+                    <!-- Radix UI -->
+                    <div class="tech-orbit-item" style="--angle: 150deg; --radius: 180px;">
+                        <div class="tech-orbit-card" title="Radix UI">
+                            <span class="text-logo" style="color: #A0886F; font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 1.2rem;">R</span>
+                            <span>Radix UI</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Shadcn/UI</span>
-                </div>
-
-                <!-- Vercel -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #000000;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="width: 20px; height: 20px;">
-                            <polygon points="12 2 22 22 2 22"></polygon>
-                        </svg>
+                    <!-- Shadcn/UI -->
+                    <div class="tech-orbit-item" style="--angle: 210deg; --radius: 180px;">
+                        <div class="tech-orbit-card" title="Shadcn/UI">
+                            <svg width="24" height="24" viewBox="0 0 256 256" fill="black" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+                                <path d="M208 40L48 200M208 100L100 208" stroke="black" stroke-width="24" stroke-linecap="round" />
+                            </svg>
+                            <span>Shadcn/UI</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Vercel</span>
-                </div>
-
-                <!-- GitHub -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #24292F;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;">
-                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                        </svg>
+                    <!-- Cloudflare -->
+                    <div class="tech-orbit-item" style="--angle: 270deg; --radius: 180px;">
+                        <div class="tech-orbit-card" title="Cloudflare">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: #F38020;">
+                                <path d="M19.35 10.04a7.5 7.5 0 0 0-14-2 6 6 0 0 0-3.35 11h16.4a5 5 0 0 0 .95-9z" />
+                            </svg>
+                            <span>Cloudflare</span>
+                        </div>
                     </div>
-                    <span class="tech-name">GitHub</span>
-                </div>
-
-                <!-- Cloudflare -->
-                <div class="tech-card">
-                    <div class="tech-icon-container" style="background: #F38020;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;">
-                            <path d="M19.35 10.04a7.5 7.5 0 0 0-14-2 6 6 0 0 0-3.35 11h16.4a5 5 0 0 0 .95-9z" />
-                        </svg>
+                    <!-- Vercel -->
+                    <div class="tech-orbit-item" style="--angle: 330deg; --radius: 180px;">
+                        <div class="tech-orbit-card" title="Vercel">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color: black; width: 20px; height: 20px;">
+                                <polygon points="12 2 22 22 2 22"></polygon>
+                            </svg>
+                            <span>Vercel</span>
+                        </div>
                     </div>
-                    <span class="tech-name">Cloudflare</span>
                 </div>
             </div>
             
