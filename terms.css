@@ -156,6 +156,14 @@
     transform: scaleX(1);
 }
 
+.notice-text,
+.terms-sub-text,
+.related-link,
+.help-link {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 /* --- Terms Body Layout --- */
 .terms-body-section {
     padding: 2rem 0 4rem;
@@ -521,7 +529,7 @@
 /* Policy Links Grid */
 .policy-links-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     margin-top: 0.5rem;
 }
