@@ -44,9 +44,12 @@ html {
     color: var(--text-primary);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
+    max-width: 100%;
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -1789,11 +1792,16 @@ button {
     }
 
     .startup-card-container {
-        padding: 1.5rem;
+        padding: 1.2rem;
     }
 
     .startup-stat-card {
-        padding: 1.2rem;
+        padding: 1.2rem 0.8rem;
+    }
+
+    .startup-vision-card {
+        padding: 1rem 0.8rem;
+        font-size: 0.82rem;
     }
 
     .startup-actions {
@@ -1874,6 +1882,8 @@ button {
     font-size: 1.25rem;
     font-weight: 800;
     color: var(--text-primary);
+    overflow-wrap: break-word;
+    word-break: break-word; /* Prevent username from breaking card boundaries on narrow screens */
 }
 
 .instagram-user-subtitle {
@@ -2066,6 +2076,11 @@ button {
     color: var(--text-secondary);
     font-weight: 500;
     white-space: nowrap;
+}
+
+a[href^="mailto:"] .contact-option-detail {
+    white-space: normal !important;
+    word-break: break-all; /* Prevent long email address from stretching mobile layout */
 }
 
 .contact-option-arrow {

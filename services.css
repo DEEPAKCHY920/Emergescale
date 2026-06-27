@@ -44,9 +44,12 @@ html {
     color: var(--text-primary);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
+    max-width: 100%;
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -625,6 +628,11 @@ button {
     color: var(--text-secondary);
     font-weight: 500;
     white-space: nowrap;
+}
+
+a[href^="mailto:"] .contact-option-detail {
+    white-space: normal !important;
+    word-break: break-all; /* Prevent long email address from stretching mobile layout */
 }
 
 .contact-option-arrow {
