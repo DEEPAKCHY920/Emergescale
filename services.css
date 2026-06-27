@@ -175,7 +175,7 @@ button {
     transform: translateX(-50%);
     width: 24px;
     height: 3px;
-    background: var(--accent-color); /* Orange/gold active page indicator line */
+    background: #FF6B00; /* Vibrant brand orange active page indicator line */
     border-radius: 100px;
 }
 
@@ -782,6 +782,7 @@ a[href^="mailto:"] .contact-option-detail {
     justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.02);
     z-index: 5;
+    pointer-events: auto; /* Allow logo click when parent container has pointer-events: none */
     transition: var(--transition-smooth);
 }
 
@@ -999,7 +1000,7 @@ a[href^="mailto:"] .contact-option-detail {
         padding: 0;
         width: 24px;
         height: 24px;
-        color: var(--accent-color);
+        color: #FF6B00;
         transition: transform var(--transition-fast);
     }
     
