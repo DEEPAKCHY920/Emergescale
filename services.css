@@ -651,6 +651,7 @@ a[href^="mailto:"] .contact-option-detail {
     background: #FAF8F5;
     padding: 6rem 0 3rem 0;
     border-top: 1px solid var(--border-color);
+    overflow: hidden; /* Prevent watermark from causing horizontal scroll */
 }
 
 .footer-top-content {
@@ -751,9 +752,10 @@ a[href^="mailto:"] .contact-option-detail {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px; /* Allows full text to fit on desktop */
     height: 100%;
-    overflow: hidden; /* Prevent text overflow from causing horizontal scroll */
+    overflow: visible; /* Prevent clipping */
+    pointer-events: none; /* Make sure it doesn't block text selection of copyright/crafted */
 }
 
 .footer-watermark-text {
