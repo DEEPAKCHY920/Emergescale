@@ -42,4 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
             contactForm.reset();
         });
     }
+
+    const fadeItems = document.querySelectorAll('.fade-in-section');
+    if (fadeItems.length) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.18,
+            rootMargin: '0px 0px -80px 0px'
+        });
+
+        fadeItems.forEach(item => observer.observe(item));
+    }
 });
