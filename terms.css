@@ -415,6 +415,196 @@
     text-decoration: underline;
 }
 
+/* Help Card Styling */
+.terms-help-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(199, 154, 99, 0.12);
+    border-radius: 20px;
+    padding: 2.2rem 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.help-card-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.help-subtitle {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9E978C;
+    letter-spacing: 1px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 0.3rem;
+}
+
+.help-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.3px;
+}
+
+.help-desc {
+    font-size: 0.88rem;
+    color: #625E56;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.6;
+}
+
+.help-contact-info {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.help-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: #625E56;
+}
+
+.help-icon {
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.help-link {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.help-link:hover {
+    text-decoration: underline;
+}
+
+.help-card-action {
+    flex-shrink: 0;
+}
+
+.help-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #0E1217;
+    color: #FFFFFF;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 100px;
+    letter-spacing: 0.8px;
+    border: 1px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.help-btn:hover {
+    background: var(--accent-color);
+    color: #FFFFFF;
+}
+
+/* Policy Links Grid */
+.policy-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.policy-link-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.8rem;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(199, 154, 99, 0.12);
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+    transition: all 0.3s ease;
+}
+
+.policy-link-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
+    transform: translateY(-2px);
+}
+
+.policy-link-left {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.policy-icon-box {
+    width: 38px;
+    height: 38px;
+    background: rgba(199, 154, 99, 0.08);
+    color: var(--accent-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.policy-link-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.policy-link-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.policy-link-desc {
+    font-size: 0.8rem;
+    color: #8F887D;
+}
+
+.policy-arrow {
+    font-size: 1.1rem;
+    color: #9E978C;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.policy-link-card:hover .policy-arrow {
+    transform: translateX(4px);
+    color: var(--accent-color);
+}
+
+/* Effective note */
+.terms-effective-note {
+    text-align: center;
+    max-width: 800px;
+    margin: 4rem auto 1.5rem;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: #8E877D;
+    border-top: 1px solid rgba(199, 154, 99, 0.12);
+    padding-top: 2rem;
+}
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .terms-hero {
@@ -526,5 +716,44 @@
     
     .notice-icon {
         margin-top: 0;
+    }
+
+    /* Mobile Help Card */
+    .terms-help-card {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 1.8rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .help-card-content {
+        text-align: center;
+    }
+
+    .help-contact-info {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .help-btn {
+        width: 100%;
+    }
+
+    /* Mobile Policy Links */
+    .policy-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .policy-link-card {
+        padding: 1.2rem 1.5rem;
+    }
+
+    /* Mobile Effective note */
+    .terms-effective-note {
+        margin-top: 2.5rem;
+        padding: 1.5rem 1rem 0;
     }
 }
