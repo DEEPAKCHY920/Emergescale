@@ -1108,7 +1108,7 @@ button {
     animation: spin-clockwise 80s linear infinite;
 }
 
-.outer-ring .tech-orbit-card {
+.outer-ring .tech-orbit-card-wrapper {
     animation: spin-counter 80s linear infinite;
 }
 
@@ -1116,18 +1116,30 @@ button {
     animation: spin-counter 60s linear infinite;
 }
 
-.inner-ring .tech-orbit-card {
+.inner-ring .tech-orbit-card-wrapper {
     animation: spin-clockwise 60s linear infinite;
+}
+
+.tech-orbit-card-wrapper {
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hover Pauses & Glows */
 .tech-orbit-container:hover .tech-orbit-ring,
-.tech-orbit-container:hover .tech-orbit-card {
+.tech-orbit-container:hover .tech-orbit-card-wrapper {
     animation-play-state: paused;
 }
 
+.tech-orbit-card {
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
 .tech-orbit-card:hover {
-    transform: scale(1.15) !important;
+    transform: scale(1.15);
     border-color: #FF5C00;
     box-shadow: 0 12px 30px rgba(255, 92, 0, 0.15);
 }
@@ -1247,6 +1259,9 @@ button {
     
     .tech-orbit-center {
         position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
         width: 140px;
         height: 140px;
         margin-bottom: 2rem;
@@ -1274,6 +1289,12 @@ button {
         top: auto;
         transform: none !important;
         animation: none !important;
+    }
+    
+    .tech-orbit-card-wrapper {
+        animation: none !important;
+        width: auto;
+        height: auto;
     }
     
     .tech-orbit-card {
