@@ -1,751 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emergescale — README</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;600&display=swap');
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --black: #0a0a0a;
-    --white: #f5f5f0;
-    --cream: #f0ede6;
-    --orange: #e85d04;
-    --orange-dim: rgba(232,93,4,0.12);
-    --grey: #888;
-    --border: rgba(255,255,255,0.08);
-    --card-bg: rgba(255,255,255,0.04);
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 2rem 3rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 10%, rgba(232,93,4,0.18) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  /* floating orbs */
-  .orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.25;
-    animation: drift 12s ease-in-out infinite alternate;
-  }
-  .orb-1 { width: 420px; height: 420px; background: var(--orange); top: -120px; right: -100px; animation-delay: 0s; }
-  .orb-2 { width: 300px; height: 300px; background: #7c3aed; bottom: 0; left: -80px; animation-delay: -4s; }
-  .orb-3 { width: 200px; height: 200px; background: var(--orange); bottom: 80px; right: 10%; animation-delay: -8s; }
-
-  @keyframes drift {
-    from { transform: translate(0, 0) scale(1); }
-    to   { transform: translate(30px, 20px) scale(1.08); }
-  }
-
-  .badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--orange-dim);
-    border: 1px solid rgba(232,93,4,0.35);
-    border-radius: 999px;
-    padding: 6px 18px;
-    font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--orange);
-    margin-bottom: 2rem;
-    animation: fadeDown .7s ease both;
-  }
-  .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 1.5s ease infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
-
-  .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(3.5rem, 10vw, 7rem);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    animation: fadeDown .8s .1s ease both;
-  }
-  .hero-title em { font-style: italic; color: var(--orange); }
-  .hero-title .dot { color: var(--orange); }
-
-  .hero-sub {
-    max-width: 560px;
-    margin: 1.5rem auto 0;
-    color: #aaa;
-    font-size: 1.05rem;
-    animation: fadeDown .8s .2s ease both;
-  }
-
-  /* pill bar */
-  .pill-bar {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
-    margin-top: 2.5rem;
-    animation: fadeDown .8s .3s ease both;
-  }
-  .pill {
-    display: flex; align-items: center; gap: 6px;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 6px 16px;
-    font-size: 12px; font-weight: 500;
-    transition: border-color .25s, background .25s;
-    cursor: default;
-  }
-  .pill:hover { border-color: rgba(232,93,4,.5); background: var(--orange-dim); }
-  .pill-icon { font-size: 14px; }
-
-  .hero-cta {
-    display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
-    margin-top: 2.5rem;
-    animation: fadeDown .8s .4s ease both;
-  }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 28px; border-radius: 8px;
-    font-size: 14px; font-weight: 600;
-    text-decoration: none; cursor: pointer;
-    transition: transform .2s, box-shadow .2s, background .2s;
-  }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-primary { background: var(--orange); color: #fff; }
-  .btn-primary:hover { box-shadow: 0 8px 28px rgba(232,93,4,.45); }
-  .btn-ghost { background: transparent; color: var(--white); border: 1px solid var(--border); }
-  .btn-ghost:hover { border-color: rgba(255,255,255,.3); background: rgba(255,255,255,.05); }
-
-  /* scroll hint */
-  .scroll-hint {
-    margin-top: 4rem;
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
-    color: #555; font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
-    animation: fadeDown .8s .6s ease both;
-  }
-  .scroll-arrow { animation: bounce 1.6s ease infinite; }
-  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
-
-  /* ── SECTION COMMON ── */
-  section { padding: 5rem 2rem; }
-  .container { max-width: 900px; margin: 0 auto; }
-
-  .section-label {
-    font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
-    color: var(--orange); margin-bottom: .75rem; display: block;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 700; letter-spacing: -.02em;
-    line-height: 1.15;
-    margin-bottom: 1rem;
-  }
-  .section-desc { color: #888; max-width: 520px; }
-
-  hr.divider {
-    border: none; border-top: 1px solid var(--border);
-    margin: 0 auto; max-width: 900px;
-  }
-
-  /* ── STATS ── */
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 3rem;
-  }
-  .stat {
-    background: var(--black);
-    padding: 2rem 1.5rem;
-    display: flex; flex-direction: column; align-items: center; text-align: center;
-    transition: background .25s;
-  }
-  .stat:hover { background: var(--card-bg); }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem; font-weight: 700; color: var(--orange);
-    line-height: 1;
-  }
-  .stat-lbl { font-size: 12px; color: #666; margin-top: .4rem; letter-spacing: .04em; }
-
-  /* ── SERVICES ── */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 2.5rem;
-  }
-  .service-card {
-    background: var(--black);
-    padding: 2rem;
-    transition: background .25s;
-  }
-  .service-card:hover { background: var(--card-bg); }
-  .service-card:hover .service-icon { color: var(--orange); transform: scale(1.15); }
-  .service-icon {
-    font-size: 1.5rem; margin-bottom: 1rem;
-    display: inline-block;
-    transition: color .25s, transform .25s;
-  }
-  .service-title { font-weight: 600; font-size: .95rem; margin-bottom: .4rem; }
-  .service-text { color: #666; font-size: .875rem; }
-
-  /* ── TECH STACK ── */
-  .tech-section { background: rgba(255,255,255,.015); }
-  .tech-grid {
-    display: flex; flex-wrap: wrap; gap: 10px;
-    margin-top: 2.5rem;
-  }
-  .tech-pill {
-    display: flex; align-items: center; gap: 8px;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 9px 16px;
-    font-size: 13px; font-weight: 500;
-    transition: border-color .2s, background .2s, transform .2s;
-    cursor: default;
-  }
-  .tech-pill:hover {
-    border-color: var(--orange);
-    background: var(--orange-dim);
-    transform: translateY(-2px);
-  }
-  .tech-pill-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-  /* ── PROCESS ── */
-  .process-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; }
-  .process-item {
-    display: flex; gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-    transition: background .2s;
-  }
-  .process-item:last-child { border-bottom: none; }
-  .process-item:hover .process-num-box { background: var(--orange); color: #fff; }
-  .process-num-box {
-    width: 44px; height: 44px; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px; font-weight: 600; color: var(--orange);
-    transition: background .25s, color .25s;
-    margin-top: 2px;
-  }
-  .process-body h4 { font-weight: 600; font-size: .95rem; margin-bottom: .3rem; }
-  .process-body p { color: #666; font-size: .875rem; }
-
-  /* ── PROJECT ── */
-  .project-card {
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 2.5rem;
-    background: var(--card-bg);
-    transition: border-color .3s;
-  }
-  .project-card:hover { border-color: rgba(232,93,4,.4); }
-  .project-header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid var(--border);
-    flex-wrap: wrap; gap: 1rem;
-  }
-  .project-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; }
-  .project-tags { display: flex; gap: 8px; flex-wrap: wrap; }
-  .tag {
-    padding: 4px 12px; border-radius: 999px;
-    border: 1px solid var(--border);
-    font-size: 11px; font-weight: 600; letter-spacing: .05em;
-    color: #aaa;
-  }
-  .project-body { padding: 2rem; }
-  .project-body p { color: #888; font-size: .9rem; }
-  .project-features {
-    margin-top: 1.25rem;
-    display: grid; grid-template-columns: 1fr 1fr; gap: .6rem;
-  }
-  .feature-item {
-    display: flex; align-items: center; gap: 8px;
-    font-size: .85rem; color: #aaa;
-  }
-  .check { color: var(--orange); font-size: 13px; }
-
-  /* ── STACK FILE TREE ── */
-  .file-tree {
-    background: #0d0d0d;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1.5rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    margin-top: 2rem;
-    line-height: 1.9;
-  }
-  .tree-root { color: var(--orange); font-weight: 600; }
-  .tree-dir { color: #7c9fff; }
-  .tree-file { color: #aaa; }
-  .tree-indent { padding-left: 1.2rem; }
-  .tree-comment { color: #444; }
-
-  /* ── SETUP ── */
-  .code-block {
-    background: #0d0d0d;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 1.25rem;
-  }
-  .code-header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: .75rem 1.25rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .code-lang { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #555; }
-  .code-dots { display: flex; gap: 6px; }
-  .code-dots span { width: 10px; height: 10px; border-radius: 50%; }
-  .code-dots .r { background: #ff5f57; }
-  .code-dots .y { background: #febc2e; }
-  .code-dots .g { background: #28c840; }
-  .code-body { padding: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; overflow-x: auto; }
-  .code-body .cmt { color: #555; }
-  .code-body .cmd { color: #a78bfa; }
-  .code-body .str { color: #34d399; }
-  .code-body .kw  { color: var(--orange); }
-
-  /* ── CTA ── */
-  .cta-section {
-    text-align: center;
-    background: linear-gradient(180deg, transparent 0%, rgba(232,93,4,.06) 100%);
-    border-top: 1px solid var(--border);
-    padding: 5rem 2rem;
-  }
-  .cta-section .section-title { margin: .75rem auto 1rem; max-width: 480px; }
-  .cta-section .section-desc { margin: 0 auto 2.5rem; }
-  .contact-grid {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
-    margin-top: 2rem;
-  }
-  .contact-item {
-    display: flex; align-items: center; gap: 8px;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 13px; color: #aaa;
-    text-decoration: none;
-    transition: border-color .2s, background .2s, color .2s;
-  }
-  .contact-item:hover { border-color: var(--orange); background: var(--orange-dim); color: var(--white); }
-
-  /* ── FOOTER ── */
-  .footer {
-    padding: 2rem;
-    text-align: center;
-    color: #444; font-size: 12px;
-    border-top: 1px solid var(--border);
-  }
-  .footer a { color: var(--orange); text-decoration: none; }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .reveal {
-    opacity: 0; transform: translateY(24px);
-    transition: opacity .65s ease, transform .65s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* stagger children */
-  .stagger > * { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-  .stagger.visible > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay:.05s }
-  .stagger.visible > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay:.12s }
-  .stagger.visible > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay:.19s }
-  .stagger.visible > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay:.26s }
-  .stagger.visible > *:nth-child(5) { opacity:1; transform:translateY(0); transition-delay:.33s }
-  .stagger.visible > *:nth-child(6) { opacity:1; transform:translateY(0); transition-delay:.40s }
-  .stagger.visible > *:nth-child(7) { opacity:1; transform:translateY(0); transition-delay:.47s }
-  .stagger.visible > *:nth-child(8) { opacity:1; transform:translateY(0); transition-delay:.54s }
-  .stagger.visible > *:nth-child(n+9) { opacity:1; transform:translateY(0); transition-delay:.60s }
-
-  /* counter anim */
-  @keyframes countUp { from { opacity: 0; } to { opacity: 1; } }
-</style>
-</head>
-<body>
-
-<!-- ─── HERO ─── -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
-  <div class="badge"><span class="badge-dot"></span> Next.js &amp; React Digital Agency</div>
-
-  <h1 class="hero-title">Emerge<em>Scale</em><span class="dot">.</span></h1>
-  <p class="hero-sub">A luxury minimal digital agency building fast, beautiful, SEO-ready websites. Built with pure HTML · CSS · JavaScript &amp; Node.js.</p>
-
-  <div class="pill-bar">
-    <span class="pill"><span class="pill-icon">🌐</span> HTML 50.5%</span>
-    <span class="pill"><span class="pill-icon">🎨</span> CSS 34.1%</span>
-    <span class="pill"><span class="pill-icon">⚡</span> JavaScript 15.4%</span>
-    <span class="pill"><span class="pill-icon">🚀</span> Node.js Backend</span>
-    <span class="pill"><span class="pill-icon">📦</span> 30 Commits</span>
-  </div>
-
-  <div class="hero-cta">
-    <a href="https://github.com/DEEPAKCHY920/Emergescale" class="btn btn-primary">⭐ Star on GitHub</a>
-    <a href="https://github.com/DEEPAKCHY920/Emergescale/archive/refs/heads/main.zip" class="btn btn-ghost">↓ Clone Repo</a>
-  </div>
-
-  <div class="scroll-hint">
-    <span>Scroll to explore</span>
-    <span class="scroll-arrow">↓</span>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ─── STATS ─── -->
-<section>
-  <div class="container">
-    <span class="section-label reveal">By the numbers</span>
-    <div class="stats-row stagger">
-      <div class="stat"><span class="stat-num" data-target="95">0</span><span class="stat-lbl">Lighthouse Score</span></div>
-      <div class="stat"><span class="stat-num" data-target="99">0</span><span class="stat-lbl">% Client Satisfaction</span></div>
-      <div class="stat"><span class="stat-num" data-target="60">0</span><span class="stat-lbl">Day Bug Warranty</span></div>
-      <div class="stat"><span class="stat-num">1.5s</span><span class="stat-lbl">Avg Load Time</span></div>
-      <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-lbl">Pages &amp; Routes</span></div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ─── SERVICES ─── -->
-<section>
-  <div class="container">
-    <span class="section-label reveal">What this project covers</span>
-    <h2 class="section-title reveal">Services &amp; Scope</h2>
-    <p class="section-desc reveal">Every page is self-contained with its own HTML, CSS, and JS file — deployed via a lightweight Node.js/Express server.</p>
-
-    <div class="services-grid stagger">
-      <div class="service-card">
-        <div class="service-icon">💻</div>
-        <div class="service-title">Web Development</div>
-        <p class="service-text">Custom multi-page website built with vanilla HTML, CSS &amp; JS for speed and SEO.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🔍</div>
-        <div class="service-title">SEO Optimization</div>
-        <p class="service-text">Meta tags, keywords, structured markup — every page is search-engine ready.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📣</div>
-        <div class="service-title">Digital Marketing</div>
-        <p class="service-text">Full-funnel campaigns across Google and Meta for qualified leads &amp; ROI.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🎨</div>
-        <div class="service-title">UI / UX Design</div>
-        <p class="service-text">Pixel-perfect layouts with smooth animations and responsive design.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">☁️</div>
-        <div class="service-title">Hosting &amp; Cloud</div>
-        <p class="service-text">Managed via Node.js Express server — deployable on Vercel, Railway, or VPS.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">✏️</div>
-        <div class="service-title">Content &amp; Branding</div>
-        <p class="service-text">Brand identity, logo systems, and social media assets built into the site.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ─── PROJECT SHOWCASE ─── -->
-<section>
-  <div class="container">
-    <span class="section-label reveal">Portfolio</span>
-    <h2 class="section-title reveal">Featured Work</h2>
-
-    <div class="project-card reveal">
-      <div class="project-header">
-        <div class="project-name">Ekk Vastra</div>
-        <div class="project-tags">
-          <span class="tag">E-Commerce</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">UI/UX</span>
-          <span class="tag">Fashion</span>
-        </div>
-      </div>
-      <div class="project-body">
-        <p>Premium ethnic fashion e-commerce platform with seamless browsing and checkout experience — the flagship client project showcased on this agency site.</p>
-        <div class="project-features">
-          <div class="feature-item"><span class="check">✦</span> 90+ Lighthouse Score</div>
-          <div class="feature-item"><span class="check">✦</span> Mobile-first Design</div>
-          <div class="feature-item"><span class="check">✦</span> Fixed Transparent Pricing</div>
-          <div class="feature-item"><span class="check">✦</span> 60-Day Bug Warranty</div>
-          <div class="feature-item"><span class="check">✦</span> SEO Foundation Built-in</div>
-          <div class="feature-item"><span class="check">✦</span> WhatsApp Support</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ─── FILE STRUCTURE ─── -->
-<section>
-  <div class="container">
-    <span class="section-label reveal">Repository structure</span>
-    <h2 class="section-title reveal">Project Layout</h2>
-    <p class="section-desc reveal">Each route is a self-contained trio of <code style="color:var(--orange);font-family:monospace">.html</code> + <code style="color:var(--orange);font-family:monospace">.css</code> + <code style="color:var(--orange);font-family:monospace">.js</code> files.</p>
-
-    <div class="file-tree reveal">
-<span class="tree-root">📁 Emergescale/</span>
-├── <span class="tree-file">index.html</span>          <span class="tree-comment">← Home page (hero, services, portfolio, process)</span>
-├── <span class="tree-file">styles.css</span>          <span class="tree-comment">← Global styles for index</span>
-├── <span class="tree-file">app.js</span>             <span class="tree-comment">← Home page interactions & animations</span>
-├── <span class="tree-dir">about.html</span>          <span class="tree-comment">← About page</span>
-├── <span class="tree-file">about.css</span>
-├── <span class="tree-file">about.js</span>
-├── <span class="tree-dir">services.html</span>       <span class="tree-comment">← Services detail page</span>
-├── <span class="tree-file">services.css</span>
-├── <span class="tree-file">services.js</span>
-├── <span class="tree-dir">contact.html</span>        <span class="tree-comment">← Contact form page</span>
-├── <span class="tree-file">contact.css</span>
-├── <span class="tree-file">contact.js</span>
-├── <span class="tree-dir">terms.html</span>          <span class="tree-comment">← Terms & conditions</span>
-├── <span class="tree-file">terms.css / terms.js</span>
-├── <span class="tree-file">server.js</span>          <span class="tree-comment">← Express server (Node.js)</span>
-├── <span class="tree-file">package.json</span>       <span class="tree-comment">← Dependencies</span>
-├── <span class="tree-file">crop_logo.js</span>       <span class="tree-comment">← Logo utility</span>
-├── <span class="tree-file">make_transparent.js</span> <span class="tree-comment">← Asset processing</span>
-├── <span class="tree-file">favicon.ico</span>
-└── <span class="tree-dir">assets/</span>             <span class="tree-comment">← Images, logo, mockups</span>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ─── TECH STACK ─── -->
-<section class="tech-section">
-  <div class="container">
-    <span class="section-label reveal">Technology</span>
-    <h2 class="section-title reveal">Tech Stack</h2>
-    <p class="section-desc reveal">Modern, battle-tested tools that prioritise performance, scalability, and developer experience.</p>
-
-    <div class="tech-grid stagger">
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#e34c26"></span> HTML5</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#1572b6"></span> CSS3</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#f7df1e"></span> JavaScript ES6+</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#339933"></span> Node.js</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#000"></span> Express.js</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#0acf83"></span> Figma</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#000"></span> Next.js (client sites)</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#61dafb"></span> React (client sites)</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#3178c6"></span> TypeScript</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#38bdf8"></span> Tailwind CSS</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#635bff"></span> Stripe</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#f38020"></span> Cloudflare</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#000"></span> Vercel</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#336791"></span> PostgreSQL</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#13aa52"></span> MongoDB</span>
-      <span class="tech-pill"><span class="tech-pill-dot" style="background:#0055ff"></span> Framer Motion</span>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ─── PROCESS ─── -->
-<section>
-  <div class="container">
-    <span class="section-label reveal">Workflow</span>
-    <h2 class="section-title reveal">How We Work</h2>
-    <p class="section-desc reveal">A streamlined 6-step approach from concept to launch — and beyond.</p>
-
-    <div class="process-list stagger">
-      <div class="process-item">
-        <div class="process-num-box">01</div>
-        <div class="process-body"><h4>Discovery</h4><p>Free consultation to understand goals, timeline, and scope.</p></div>
-      </div>
-      <div class="process-item">
-        <div class="process-num-box">02</div>
-        <div class="process-body"><h4>Design</h4><p>Custom wireframes and UI mockups — up to 5 revision rounds.</p></div>
-      </div>
-      <div class="process-item">
-        <div class="process-num-box">03</div>
-        <div class="process-body"><h4>Development</h4><p>Clean code — Next.js or vanilla stack — built for 90+ Lighthouse.</p></div>
-      </div>
-      <div class="process-item">
-        <div class="process-num-box">04</div>
-        <div class="process-body"><h4>Testing</h4><p>Cross-browser, mobile, performance, and security scans.</p></div>
-      </div>
-      <div class="process-item">
-        <div class="process-num-box">05</div>
-        <div class="process-body"><h4>Launch</h4><p>Deploy to production with full documentation and training.</p></div>
-      </div>
-      <div class="process-item">
-        <div class="process-num-box">06</div>
-        <div class="process-body"><h4>Support</h4><p>60-day warranty, optional maintenance, SEO, and marketing.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ─── QUICK START ─── -->
-<section>
-  <div class="container">
-    <span class="section-label reveal">Get started</span>
-    <h2 class="section-title reveal">Quick Setup</h2>
-
-    <div class="code-block reveal">
-      <div class="code-header">
-        <div class="code-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
-        <span class="code-lang">bash</span>
-      </div>
-      <div class="code-body">
-<span class="cmt"># 1. Clone the repository</span>
-<span class="cmd">git</span> clone https://github.com/DEEPAKCHY920/Emergescale.git
-<span class="cmd">cd</span> Emergescale
-
-<span class="cmt"># 2. Install dependencies</span>
-<span class="cmd">npm</span> install
-
-<span class="cmt"># 3. Start the Node.js server</span>
-<span class="cmd">node</span> server.js
-
-<span class="cmt"># 4. Open in browser</span>
-<span class="str">http://localhost:3000</span>
-      </div>
-    </div>
-
-    <div class="code-block reveal" style="margin-top:1rem">
-      <div class="code-header">
-        <div class="code-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
-        <span class="code-lang">json — package.json (scripts)</span>
-      </div>
-      <div class="code-body">
-{
-  <span class="kw">"scripts"</span>: {
-    <span class="str">"start"</span>: <span class="str">"node server.js"</span>,
-    <span class="str">"dev"</span>:   <span class="str">"nodemon server.js"</span>
-  }
-}
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ─── CTA ─── -->
-<section class="cta-section">
-  <div class="container">
-    <span class="section-label reveal" style="display:block;text-align:center">Get in touch</span>
-    <h2 class="section-title reveal">Ready to Transform Your Digital Presence?</h2>
-    <p class="section-desc reveal" style="margin:0 auto 2rem">Book a free 30-minute consultation — no commitment, no pressure. Just expert advice tailored to your goals.</p>
-
-    <div class="hero-cta reveal">
-      <a href="https://github.com/DEEPAKCHY920/Emergescale" class="btn btn-primary">⭐ Star this Repo</a>
-      <a href="mailto:emergescale.official@gmail.com" class="btn btn-ghost">✉ Email Us</a>
-    </div>
-
-    <div class="contact-grid reveal">
-      <a href="mailto:emergescale.official@gmail.com" class="contact-item">✉ emergescale.official@gmail.com</a>
-      <a href="tel:+918796072717" class="contact-item">📞 +91 879 607 2717</a>
-      <a href="https://wa.me/918796072717" class="contact-item">💬 WhatsApp</a>
-      <a href="https://instagram.com/emergescale.official" class="contact-item">📸 @emergescale.official</a>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FOOTER ─── -->
-<footer class="footer">
-  <p>Built with ♥ by <a href="https://github.com/DEEPAKCHY920">DEEPAKCHY920</a> · <a href="https://github.com/DEEPAKCHY920/Emergescale">github.com/DEEPAKCHY920/Emergescale</a></p>
-  <p style="margin-top:.4rem;color:#333">HTML · CSS · JavaScript · Node.js</p>
-</footer>
-
-<script>
-  // ── Intersection observer for reveals ──
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
-
-  // ── Counter animation ──
-  const counters = document.querySelectorAll('[data-target]');
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el = e.target;
-      const target = +el.dataset.target;
-      let start = 0;
-      const dur = 1200;
-      const step = timestamp => {
-        if (!start) start = timestamp;
-        const progress = Math.min((timestamp - start) / dur, 1);
-        el.textContent = Math.floor(progress * target);
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target;
-      };
-      requestAnimationFrame(step);
-      counterObserver.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-
-  counters.forEach(c => counterObserver.observe(c));
-</script>
-</body>
-</html>
+<div align="center">
+
+<img src="assets/logo.png" alt="Emergescale Logo" width="80" height="80" />
+
+# ✦ EMERGESCALE DIGITAL
+
+### *Premium Next.js & React Web Agency*
+
+**Fast · Beautiful · SEO-Ready**
+
+[![HTML](https://img.shields.io/badge/HTML-50.5%25-e34c26?style=flat-square&logo=html5&logoColor=white)](https://github.com/DEEPAKCHY920/Emergescale)
+[![CSS](https://img.shields.io/badge/CSS-34.1%25-1572b6?style=flat-square&logo=css3&logoColor=white)](https://github.com/DEEPAKCHY920/Emergescale)
+[![JavaScript](https://img.shields.io/badge/JavaScript-15.4%25-f7df1e?style=flat-square&logo=javascript&logoColor=black)](https://github.com/DEEPAKCHY920/Emergescale)
+[![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?style=flat-square&logo=node.js&logoColor=white)](https://github.com/DEEPAKCHY920/Emergescale)
+[![Commits](https://img.shields.io/badge/Commits-30-orange?style=flat-square)](https://github.com/DEEPAKCHY920/Emergescale/commits/main)
+[![License](https://img.shields.io/badge/License-MIT-purple?style=flat-square)](LICENSE)
+
+</div>
+
+---
+
+## ⚡ About
+
+**Emergescale** is a luxury minimal digital agency website built with pure **HTML, CSS, JavaScript** and a **Node.js / Express** backend. It showcases agency services, portfolio work, tech stack, and a streamlined client onboarding flow — all optimised for a 95+ Lighthouse score.
+
+> *"We build fast, beautiful, SEO-ready websites using Next.js and React."*
+
+---
+
+## 📊 At a Glance
+
+| Metric | Value |
+|---|---|
+| 🏆 Lighthouse Score | **95+** |
+| 😊 Client Satisfaction | **99%** |
+| 🛡️ Bug Warranty | **60 Days** |
+| ⚡ Avg Load Time | **1.5s** |
+| 📄 Pages / Routes | **6** |
+| 💬 Support Channel | **WhatsApp** |
+
+---
+
+## 🗂️ Project Structure
+
+```
+📁 Emergescale/
+├── index.html              ← Home (hero, services, portfolio, process, tech)
+├── styles.css              ← Global stylesheet for home
+├── app.js                  ← Home interactions & scroll animations
+│
+├── about.html              ← About page
+├── about.css
+├── about.js
+│
+├── services.html           ← Services detail page
+├── services.css
+├── services.js
+│
+├── contact.html            ← Contact form
+├── contact.css
+├── contact.js
+│
+├── terms.html              ← Terms & conditions
+├── terms.css
+├── terms.js
+│
+├── server.js               ← Express server (Node.js)
+├── package.json            ← Dependencies & scripts
+├── package-lock.json
+│
+├── crop_logo.js            ← Logo crop utility
+├── make_transparent.js     ← Asset transparency processor
+├── favicon.ico
+└── assets/                 ← Logo, mockup images, references
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Agency Website (this repo)
+![HTML5](https://img.shields.io/badge/HTML5-e34c26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+
+### Client Projects (delivered stack)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61dafb?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-38bdf8?style=flat-square&logo=tailwindcss&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-13aa52?style=flat-square&logo=mongodb&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635bff?style=flat-square&logo=stripe&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-f38020?style=flat-square&logo=cloudflare&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-0acf83?style=flat-square&logo=figma&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2d3748?style=flat-square&logo=prisma&logoColor=white)
+![Framer](https://img.shields.io/badge/Framer_Motion-0055ff?style=flat-square&logo=framer&logoColor=white)
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/DEEPAKCHY920/Emergescale.git
+cd Emergescale
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the server
+node server.js
+
+# 4. Open in browser
+# → http://localhost:3000
+```
+
+> **Tip:** Install `nodemon` for hot-reloading during development — `npx nodemon server.js`
+
+---
+
+## 🎯 Services
+
+| Service | Description |
+|---|---|
+| 💻 **Web Development** | Custom sites with Next.js & React, built for 90+ Lighthouse |
+| 🔍 **SEO Optimization** | Technical audits, keyword targeting, structured markup |
+| 📣 **Digital Marketing** | Full-funnel Google & Meta campaigns for qualified leads |
+| 🎨 **UI / UX Design** | Pixel-perfect designs balancing aesthetics and usability |
+| ☁️ **Hosting & Cloud** | 99.99% uptime, SSL, backups, CDN integration |
+| ✏️ **Content & Branding** | Brand identity, logo systems, and social media assets |
+
+---
+
+## 📋 Our Process
+
+```
+01 Discovery  →  Free consultation — goals, timeline, and scope
+02 Design     →  Wireframes & UI mockups — up to 5 revision rounds
+03 Development →  Clean Next.js / React code — 90+ Lighthouse guaranteed
+04 Testing    →  Cross-browser, mobile, performance & security scans
+05 Launch     →  Deploy to production with full docs & team training
+06 Support    →  60-day bug warranty + optional monthly maintenance
+```
+
+---
+
+## 🏆 Portfolio
+
+### Ekk Vastra
+> Premium ethnic fashion e-commerce platform
+
+`E-Commerce` `Next.js` `UI/UX` `Fashion`
+
+A full-featured online fashion store with seamless browsing, filtering, and checkout experience — the flagship project showcased on this agency site.
+
+**Highlights:**
+- ✦ 90+ Lighthouse Performance Score
+- ✦ Mobile-first Responsive Design
+- ✦ SEO Foundation Built-in
+- ✦ 60-Day Post-launch Support
+
+---
+
+## 💬 Why Emergescale?
+
+| ⚡ Performance First | 💰 Fixed Pricing | 🤝 Long-term Partner |
+|---|---|---|
+| Every project ships with a 90+ Lighthouse score guarantee | No hourly billing — fixed price published upfront, zero hidden fees | 60-day bug warranty, monthly maintenance & WhatsApp support |
+
+---
+
+## 📞 Contact
+
+| Channel | Details |
+|---|---|
+| ✉️ Email | [emergescale.official@gmail.com](mailto:emergescale.official@gmail.com) |
+| 📞 Phone | [+91 879 607 2717](tel:+918796072717) |
+| 💬 WhatsApp | [wa.me/918796072717](https://wa.me/918796072717) |
+| 📸 Instagram | [@emergescale.official](https://instagram.com/emergescale.official) |
+
+---
+
+## 🗒️ Pages
+
+- **`/`** — Home (Hero, Stats, Services, Portfolio, Process, Tech Stack, Testimonial, CTA)
+- **`/about`** — Team, mission, and agency story
+- **`/services`** — Detailed service offerings and pricing tiers
+- **`/contact`** — Enquiry form and contact details
+- **`/terms`** — Terms and conditions
+
+---
+
+<div align="center">
+
+**Built with ♥ by [DEEPAKCHY920](https://github.com/DEEPAKCHY920)**
+
+[⭐ Star this repo](https://github.com/DEEPAKCHY920/Emergescale) · [🍴 Fork it](https://github.com/DEEPAKCHY920/Emergescale/fork) · [🐛 Report a bug](https://github.com/DEEPAKCHY920/Emergescale/issues)
+
+</div>
