@@ -281,4 +281,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateOnlineStatus();
     setInterval(updateOnlineStatus, 60000); // Check status every minute
+
+    // --- FAQ Accordion Logic ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        trigger.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            faqItems.forEach(innerItem => {
+                innerItem.classList.remove('active');
+                innerItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+            });
+            
+            // If the clicked item was not active, open it
+            if (!isActive) {
+                item.classList.add('active');
+                trigger.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
 });
