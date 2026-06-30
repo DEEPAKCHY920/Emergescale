@@ -5,7 +5,7 @@
 
 .contact-page-main {
     padding: 10rem 0 7rem;
-    background: var(--bg-color);
+    background: #FAF8F5;
 }
 
 .contact-layout-section {
@@ -35,7 +35,7 @@
     text-transform: uppercase;
     font-size: 0.78rem;
     letter-spacing: 0.32em;
-    color: var(--color-hex-b79d76);
+    color: #b79d76;
     font-weight: 700;
     margin-bottom: 0.8rem;
 }
@@ -73,35 +73,35 @@
 }
 
 .channel-row-card {
-    background: var(--color-white);
-    border: 1px solid var(--color-sand-bg);
+    background: #FFFFFF;
+    border: 1px solid #EFE8DD;
     border-radius: 24px;
     padding: 24px 32px;
     display: flex;
     align-items: center;
     gap: 24px;
-    box-shadow: 0 10px 30px var(--color-rgba-0-0-0-0-02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .channel-row-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 45px var(--color-rgba-185-128-48-0-1);
-    border-color: var(--color-hex-e5d0af);
+    box-shadow: 0 20px 45px rgba(185,128,48,0.1);
+    border-color: #E5D0AF;
 }
 
 .channel-icon-box {
     width: 64px;
     height: 64px;
     border-radius: 22px; /* Smooth iOS-like organic squircle */
-    background: var(--color-hex-181818) !important; /* Dark charcoal box */
-    color: var(--color-hex-e6c594) !important; /* Gold/cream outline icon color */
+    background: #181818 !important; /* Dark charcoal box */
+    color: #E6C594 !important; /* Gold/cream outline icon color */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     transition: transform 0.45s ease, background-color 0.45s ease, color 0.45s ease;
-    box-shadow: 0 6px 15px var(--color-rgba-0-0-0-0-15);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .channel-icon-box svg {
@@ -111,8 +111,8 @@
 }
 
 .channel-row-card:hover .channel-icon-box {
-    background: var(--color-hex-c18a43) !important;
-    color: var(--color-white) !important;
+    background: #C18A43 !important;
+    color: #FFFFFF !important;
 }
 
 .channel-row-card:hover .channel-icon-box svg {
@@ -133,7 +133,7 @@
 .channel-row-title {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--color-dark-1a);
+    color: #1A1A1A;
     margin: 0;
 }
 
@@ -143,22 +143,22 @@
     padding: 4px 12px;
     border-radius: 100px;
     letter-spacing: 0.02em;
-    background: var(--color-hex-f7f2ea) !important; /* Unified beige/cream badge */
-    color: var(--color-hex-c18a43) !important; /* Unified gold/brown text */
-    border: 1px solid var(--color-hex-f0e9dd);
+    background: #F7F2EA !important; /* Unified beige/cream badge */
+    color: #C18A43 !important; /* Unified gold/brown text */
+    border: 1px solid #F0E9DD;
 }
 
 .channel-row-value {
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--color-hex-c18a43); /* Gold/brown text for email/phone values! */
+    color: #C18A43; /* Gold/brown text for email/phone values! */
     margin: 0 0 6px 0;
     letter-spacing: 0.01em;
 }
 
 .channel-row-description {
     font-size: 14px;
-    color: var(--color-hex-666666);
+    color: #666666;
     line-height: 1.6;
     margin: 0;
 }
@@ -170,12 +170,12 @@
     justify-content: center;
     gap: 8px;
     padding: 10px 22px;
-    border: 1px solid var(--color-hex-e2d5c1);
+    border: 1px solid #E2D5C1;
     border-radius: 100px;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    color: var(--color-hex-c18a43);
+    color: #C18A43;
     background: transparent;
     text-transform: uppercase;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -191,10 +191,10 @@
 }
 
 .button-row-action:hover {
-    background: var(--color-hex-c18a43);
-    color: var(--color-white) !important;
-    border-color: var(--color-hex-c18a43);
-    box-shadow: 0 6px 15px var(--color-rgba-193-138-67-0-25);
+    background: #C18A43;
+    color: #FFFFFF !important;
+    border-color: #C18A43;
+    box-shadow: 0 6px 15px rgba(193, 138, 67, 0.25);
 }
 
 .button-row-action:hover svg {
@@ -207,8 +207,8 @@
     align-items: center;
     gap: 1.2rem;
     padding: 1.2rem 1.8rem;
-    background: var(--color-hex-faf5ee);
-    border: 1px solid var(--color-rgba-199-154-99-0-15);
+    background: #FAF5EE;
+    border: 1px solid rgba(199, 154, 99, 0.15);
     border-radius: 20px;
     width: 100%;
 }
@@ -216,7 +216,7 @@
 .protip-icon-box {
     width: 32px;
     height: 32px;
-    background: var(--color-rgba-199-154-99-0-15);
+    background: rgba(199, 154, 99, 0.15);
     color: var(--accent-color);
     border-radius: 8px;
     display: flex;
@@ -240,7 +240,7 @@
 }
 
 .info-block-side-card {
-    background: var(--color-white);
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 1.5rem 1.6rem;
@@ -250,8 +250,8 @@
 
 .info-block-side-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 35px -15px var(--color-rgba-199-154-99-0-18);
-    border-color: var(--color-rgba-199-154-99-0-25);
+    box-shadow: 0 15px 35px -15px rgba(199, 154, 99, 0.18);
+    border-color: rgba(199, 154, 99, 0.25);
 }
 
 .side-card-header {
@@ -282,23 +282,23 @@
 }
 
 .clock-color {
-    background: var(--color-hex-e8f5e9);
-    color: var(--color-hex-2e7d32);
+    background: #E8F5E9;
+    color: #2E7D32;
 }
 
 .pin-color {
-    background: var(--color-hex-ffebee);
-    color: var(--color-hex-c62828);
+    background: #FFEBEE;
+    color: #C62828;
 }
 
 .follow-color {
-    background: var(--color-hex-e3f2fd);
-    color: var(--color-hex-1565c0);
+    background: #E3F2FD;
+    color: #1565C0;
 }
 
 .shield-color {
-    background: var(--color-hex-e8eaf6);
-    color: var(--color-hex-283593);
+    background: #E8EAF6;
+    color: #283593;
 }
 
 .side-card-title {
@@ -348,15 +348,15 @@
 .hours-val-badge {
     font-size: 0.82rem;
     font-weight: 700;
-    background: var(--color-hex-faf5ee);
-    color: var(--color-hex-b79d76);
+    background: #FAF5EE;
+    color: #b79d76;
     padding: 0.25rem 0.7rem;
     border-radius: 100px;
 }
 
 .hours-val-badge.closed-badge {
-    color: var(--color-hex-c62828);
-    background: var(--color-hex-ffebee);
+    color: #C62828;
+    background: #FFEBEE;
 }
 
 .side-card-status-row {
@@ -374,12 +374,12 @@
 }
 
 .status-dot.green-dot {
-    background-color: var(--color-hex-2e7d32);
-    box-shadow: 0 0 8px var(--color-rgba-46-125-50-0-6);
+    background-color: #2E7D32;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.6);
 }
 
 .status-dot.gray-dot {
-    background-color: var(--color-hex-9e9e9e);
+    background-color: #9E9E9E;
 }
 
 .status-text {
@@ -394,7 +394,7 @@
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--border-color);
-    background: var(--bg-color);
+    background: #FAF8F5;
     height: 280px;
 }
 
@@ -403,7 +403,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    background: var(--bg-color);
+    background: #FAF8F5;
     border-radius: 20px;
 }
 
@@ -418,7 +418,7 @@
     top: 1rem;
     left: 1rem;
     z-index: 10;
-    background: var(--color-white);
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
     border-radius: 100px;
@@ -435,7 +435,7 @@
 
 .open-maps-badge:hover {
     background: var(--text-primary);
-    color: var(--color-white);
+    color: #FFFFFF;
 }
 
 /* Social links row */
@@ -469,21 +469,21 @@
 }
 
 .instagram-btn:hover {
-    background: var(--color-hex-fff0f2);
-    border-color: var(--color-instagram);
-    color: var(--color-instagram);
+    background: #FFF0F2;
+    border-color: #E1306C;
+    color: #E1306C;
 }
 
 .x-btn:hover {
-    background: var(--color-gray-light);
-    border-color: var(--color-dark-111);
-    color: var(--color-dark-111);
+    background: #F2F2F2;
+    border-color: #111111;
+    color: #111111;
 }
 
 .linkedin-btn:hover {
-    background: var(--color-hex-e8f5e9);
-    border-color: var(--color-linkedin);
-    color: var(--color-linkedin);
+    background: #E8F5E9;
+    border-color: #0077B5;
+    color: #0077B5;
 }
 
 /* Commitment list */
@@ -519,7 +519,7 @@
 .commitment-value {
     font-size: 0.92rem;
     font-weight: 700;
-    color: var(--color-hex-2e7d32);
+    color: #2E7D32;
 }
 
 .commitment-footnote {
@@ -540,7 +540,7 @@
 }
 
 .contact-form-channel-card {
-    background: var(--color-white);
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
     border-radius: 28px;
     padding: 2.6rem;
@@ -593,7 +593,7 @@
     border: 1px solid var(--border-color);
     border-radius: 18px;
     padding: 1rem 1.2rem;
-    background: var(--bg-color);
+    background: #FAF8F5;
     color: var(--text-primary);
     font-family: inherit;
     font-size: 0.95rem;
@@ -603,9 +603,9 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    background-color: var(--color-white);
-    border-color: var(--color-rgba-199-154-99-0-55);
-    box-shadow: 0 0 0 4px var(--color-rgba-199-154-99-0-12);
+    background-color: #FFFFFF;
+    border-color: rgba(199, 154, 99, 0.55);
+    box-shadow: 0 0 0 4px rgba(199, 154, 99, 0.12);
 }
 
 .submit-btn {
@@ -613,7 +613,7 @@
     padding: 1.1rem;
     border-radius: 100px;
     background: var(--accent-color);
-    color: var(--color-white);
+    color: #FFFFFF;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -623,7 +623,7 @@
 }
 
 .submit-btn:hover {
-    background-color: var(--color-hex-b08346);
+    background-color: #b08346;
     transform: translateY(-1px);
 }
 
@@ -634,13 +634,13 @@
     right: 2.5rem;
     width: 64px;
     height: 64px;
-    background-color: var(--color-whatsapp);
-    color: var(--color-white);
+    background-color: #25D366;
+    color: #FFFFFF;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 20px var(--color-rgba-37-211-102-0-4);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
     z-index: 999;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
     animation: whatsapp-widget-pulse 2s infinite;
@@ -648,7 +648,7 @@
 
 .whatsapp-floating-widget:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 25px var(--color-rgba-37-211-102-0-6);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
 .whatsapp-floating-widget svg {
@@ -661,15 +661,15 @@
 
 @keyframes whatsapp-widget-pulse {
     0% {
-        box-shadow: 0 0 0 0 var(--color-rgba-37-211-102-0-5);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
     }
 
     70% {
-        box-shadow: 0 0 0 16px var(--color-rgba-37-211-102-0);
+        box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
     }
 
     100% {
-        box-shadow: 0 0 0 0 var(--color-rgba-37-211-102-0);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
 }
 
@@ -738,7 +738,7 @@
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
-    background-color: var(--bg-color);
+    background-color: #FAF8F5;
     /* Matches EmergeScale background color */
 }
 
@@ -767,7 +767,7 @@
     text-transform: uppercase;
     font-size: 0.78rem;
     letter-spacing: 0.32em;
-    color: var(--accent-color);
+    color: #C79A63;
     /* Muted Gold Accent */
     font-weight: 700;
     margin-bottom: 0.8rem;
@@ -778,14 +778,14 @@
     display: inline-block;
     width: 24px;
     height: 1px;
-    background-color: var(--accent-color);
+    background-color: #C79A63;
 }
 
 .conversation-hero-title {
     font-size: clamp(2.6rem, 5vw, 4.2rem);
     line-height: 1.15;
     font-weight: 800;
-    color: var(--text-primary);
+    color: #1E1E1E;
     margin: 0.5rem 0 1.2rem;
 }
 
@@ -793,16 +793,16 @@
     font-family: var(--font-serif);
     font-style: italic;
     font-weight: 400;
-    color: var(--text-primary);
+    color: #1E1E1E;
 }
 
 .conversation-hero-title .gold-dot {
-    color: var(--accent-color);
+    color: #C79A63;
 }
 
 .conversation-hero-subtitle {
     font-size: 1.05rem;
-    color: var(--text-secondary);
+    color: #6E6E6E;
     line-height: 1.65;
     margin-bottom: 2.2rem;
     max-width: 620px;
@@ -810,7 +810,7 @@
 }
 
 .conversation-hero-subtitle .gold-bold {
-    color: var(--accent-color);
+    color: #C79A63;
     font-weight: 700;
 }
 
@@ -819,11 +819,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--color-white);
-    border: 1px solid var(--border-color);
+    background: #FFFFFF;
+    border: 1px solid #EFECE6;
     border-radius: 100px;
     padding: 0.8rem 1.4rem;
-    box-shadow: 0 4px 15px var(--color-rgba-199-154-99-0-03);
+    box-shadow: 0 4px 15px rgba(199, 154, 99, 0.03);
     margin-bottom: 3rem;
     width: 100%;
     gap: 0.8rem;
@@ -840,45 +840,45 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: var(--accent-light);
+    background: #F4ECE1;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-color);
+    color: #C79A63;
     flex-shrink: 0;
 }
 
 .conversation-badge-icon.lightning {
-    background: var(--color-hex-fff3e0);
-    color: var(--color-hex-ff9800);
+    background: #FFF3E0;
+    color: #FF9800;
 }
 
 .conversation-badge-icon.star {
-    background: var(--color-hex-fff9c4);
-    color: var(--color-hex-fbc02d);
+    background: #FFF9C4;
+    color: #FBC02D;
 }
 
 .conversation-badge-icon.shield {
-    background: var(--color-hex-e8eaf6);
-    color: var(--color-hex-3f51b5);
+    background: #E8EAF6;
+    color: #3F51B5;
 }
 
 .conversation-badge-icon.check {
-    background: var(--color-hex-e8f8ef);
-    color: var(--color-hex-2e7d32);
+    background: #E8F8EF;
+    color: #2E7D32;
 }
 
 .conversation-badge-text {
     font-size: 0.78rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: #1E1E1E;
     white-space: nowrap;
 }
 
 .conversation-badge-divider {
     width: 1px;
     height: 20px;
-    background-color: var(--border-color);
+    background-color: #EFECE6;
     flex-shrink: 0;
 }
 
@@ -892,32 +892,32 @@
 }
 
 .conversation-card {
-    background: var(--color-white);
-    border: 1px solid var(--border-color);
+    background: #FFFFFF;
+    border: 1px solid #EFECE6;
     border-radius: 24px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 0 4px 20px var(--color-rgba-199-154-99-0-03);
+    box-shadow: 0 4px 20px rgba(199, 154, 99, 0.03);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .conversation-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px var(--color-rgba-199-154-99-0-08);
-    border-color: var(--color-rgba-199-154-99-0-25);
+    box-shadow: 0 20px 40px rgba(199, 154, 99, 0.08);
+    border-color: rgba(199, 154, 99, 0.25);
 }
 
 .conversation-card-icon-box {
     width: 48px;
     height: 48px;
     border-radius: 14px;
-    background: var(--text-primary);
+    background: #1E1E1E;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-color);
+    color: #C79A63;
     margin-bottom: 1.4rem;
     transition: transform 0.5s ease;
 }
@@ -929,7 +929,7 @@
 .conversation-card-label {
     font-size: 0.72rem;
     font-weight: 700;
-    color: var(--accent-color);
+    color: #C79A63;
     letter-spacing: 0.15em;
     margin-bottom: 0.6rem;
     text-transform: uppercase;
@@ -938,14 +938,14 @@
 .conversation-card-value {
     font-size: 1.25rem;
     font-weight: 800;
-    color: var(--text-primary);
+    color: #1E1E1E;
     margin-bottom: 0.4rem;
     line-height: 1.3;
 }
 
 .conversation-card-desc {
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: #6E6E6E;
     margin-bottom: 1.8rem;
     line-height: 1.45;
 }
@@ -958,11 +958,11 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.8rem 1.4rem;
-    border: 1px solid var(--accent-color);
+    border: 1px solid #C79A63;
     border-radius: 100px;
     font-size: 0.82rem;
     font-weight: 700;
-    color: var(--accent-color);
+    color: #C79A63;
     background: transparent;
     transition: background 0.25s, color 0.25s, transform 0.25s;
     text-decoration: none;
@@ -974,8 +974,8 @@
 }
 
 .conversation-card-btn:hover {
-    background: var(--accent-color);
-    color: var(--color-white);
+    background: #C79A63;
+    color: #FFFFFF;
 }
 
 .conversation-card-btn:hover svg {
@@ -984,13 +984,13 @@
 
 /* WhatsApp Specific Button styling */
 .conversation-card.whatsapp-card .conversation-card-btn {
-    border-color: var(--color-whatsapp);
-    color: var(--color-whatsapp);
+    border-color: #25D366;
+    color: #25D366;
 }
 
 .conversation-card.whatsapp-card .conversation-card-btn:hover {
-    background: var(--color-whatsapp);
-    color: var(--color-white);
+    background: #25D366;
+    color: #FFFFFF;
 }
 
 .conversation-card.whatsapp-card .conversation-card-btn svg {
@@ -1008,8 +1008,8 @@
     align-items: center;
     gap: 1.2rem;
     padding: 1.2rem 1.8rem;
-    background: var(--color-hex-faf5ee);
-    border: 1px solid var(--color-rgba-199-154-99-0-15);
+    background: #FAF5EE;
+    border: 1px solid rgba(199, 154, 99, 0.15);
     border-radius: 20px;
     width: 100%;
 }
@@ -1017,8 +1017,8 @@
 .conversation-protip-icon {
     width: 32px;
     height: 32px;
-    background: var(--color-rgba-199-154-99-0-15);
-    color: var(--accent-color);
+    background: rgba(199, 154, 99, 0.15);
+    color: #C79A63;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -1028,7 +1028,7 @@
 
 .conversation-protip-text {
     font-size: 0.88rem;
-    color: var(--text-secondary);
+    color: #6E6E6E;
     line-height: 1.5;
     margin: 0;
 }
@@ -1051,7 +1051,7 @@
 @media (max-width: 1024px) {
     .conversation-hero-section {
         background-image: none !important;
-        background-color: var(--bg-color);
+        background-color: #FAF8F5;
         padding: 3rem 0 5rem;
     }
 
@@ -1073,8 +1073,8 @@
         border-radius: 28px;
         overflow: hidden;
         margin-top: 2rem;
-        border: 1px solid var(--border-color);
-        box-shadow: 0 15px 35px var(--color-rgba-199-154-99-0-06);
+        border: 1px solid #EFECE6;
+        box-shadow: 0 15px 35px rgba(199, 154, 99, 0.06);
     }
 
     .conversation-hero-mobile-visual img {
@@ -1155,9 +1155,9 @@
     overflow: hidden;
     padding: 90px 0;
     background:
-        radial-gradient(circle at top left, var(--color-hex-fff7e9) 0%, transparent 35%),
-        radial-gradient(circle at bottom right, var(--color-hex-fff4e4) 0%, transparent 35%),
-        var(--color-hex-fffdf8);
+        radial-gradient(circle at top left, #FFF7E9 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #FFF4E4 0%, transparent 35%),
+        #FFFDF8;
 }
 
 .hero-wrapper {
@@ -1179,7 +1179,7 @@ LEFT
     font-size: .82rem;
     letter-spacing: .25em;
     text-transform: uppercase;
-    color: var(--color-hex-c18a43);
+    color: #C18A43;
     font-weight: 700;
 
     margin-bottom: 25px;
@@ -1188,7 +1188,7 @@ LEFT
 .hero-tag span {
     width: 35px;
     height: 2px;
-    background: var(--color-hex-c18a43);
+    background: #C18A43;
 }
 
 .hero-content h1 {
@@ -1196,7 +1196,7 @@ LEFT
     font-size: 70px;
     line-height: 1.05;
     font-weight: 800;
-    color: var(--color-hex-1b1b1b);
+    color: #1b1b1b;
     margin-bottom: 25px;
 
 }
@@ -1211,7 +1211,7 @@ LEFT
 
 .hero-content h1 span {
 
-    color: var(--color-hex-c18a43);
+    color: #C18A43;
 
 }
 
@@ -1219,14 +1219,14 @@ LEFT
 
     font-size: 18px;
     line-height: 1.8;
-    color: var(--color-hex-646464);
+    color: #646464;
     max-width: 620px;
 
 }
 
 .hero-content p strong {
 
-    color: var(--color-hex-c18a43);
+    color: #C18A43;
 
 }
 
@@ -1250,9 +1250,9 @@ FEATURE PILLS
     align-items: center;
     gap: 12px;
 
-    background: var(--color-white);
+    background: #fff;
 
-    border: 1px solid var(--color-sand-bg);
+    border: 1px solid #EFE8DD;
 
     padding: 14px 20px;
 
@@ -1261,7 +1261,7 @@ FEATURE PILLS
     transition: .35s;
 
     box-shadow:
-        0 8px 25px var(--color-rgba-0-0-0--04);
+        0 8px 25px rgba(0, 0, 0, .04);
 
 }
 
@@ -1270,7 +1270,7 @@ FEATURE PILLS
     transform: translateY(-6px);
 
     box-shadow:
-        0 20px 35px var(--color-rgba-193-138-67--16);
+        0 20px 35px rgba(193, 138, 67, .16);
 
 }
 
@@ -1285,7 +1285,7 @@ FEATURE PILLS
     align-items: center;
     justify-content: center;
 
-    background: var(--color-hex-fff3e5);
+    background: #FFF3E5;
 
     font-size: 18px;
 
@@ -1294,7 +1294,7 @@ FEATURE PILLS
 .feature span {
 
     font-weight: 600;
-    color: var(--color-dark-2b);
+    color: #2b2b2b;
 
 }
 
@@ -1329,7 +1329,7 @@ RIGHT
     width: 420px;
     height: 420px;
 
-    border: 1px dashed var(--color-hex-e6d3b3);
+    border: 1px dashed #E6D3B3;
 
     animation: spin 35s linear infinite;
 
@@ -1347,16 +1347,16 @@ RIGHT
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 25px var(--color-rgba-193-138-67-0-15), inset 0 -3px 0 var(--color-rgba-0-0-0-0-12);
-    color: var(--color-white);
-    border: 1px solid var(--color-rgba-255-255-255-0-25);
+    box-shadow: 0 10px 25px rgba(193, 138, 67, 0.15), inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     animation: counter-spin 35s linear infinite;
     /* Counter-rotate to stay upright! */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .floating:hover {
-    box-shadow: 0 15px 35px var(--color-rgba-193-138-67-0-3), inset 0 -3px 0 var(--color-rgba-0-0-0-0-15);
+    box-shadow: 0 15px 35px rgba(193, 138, 67, 0.3), inset 0 -3px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
 
@@ -1371,25 +1371,25 @@ RIGHT
 .floating.mail {
     top: 25px;
     left: 25px;
-    background: linear-gradient(135deg, var(--color-hex-ffb84d), var(--color-hex-ff9800));
+    background: linear-gradient(135deg, #FFB84D, #FF9800);
 }
 
 .floating.whatsapp {
     top: 25px;
     right: 25px;
-    background: linear-gradient(135deg, var(--color-hex-5ad986), var(--color-whatsapp));
+    background: linear-gradient(135deg, #5AD986, #25D366);
 }
 
 .floating.phone {
     bottom: 25px;
     left: 25px;
-    background: linear-gradient(135deg, var(--color-hex-818cf8), var(--color-hex-4f46e5));
+    background: linear-gradient(135deg, #818CF8, #4F46E5);
 }
 
 .floating.location {
     bottom: 25px;
     right: 25px;
-    background: linear-gradient(135deg, var(--color-hex-f87171), var(--color-hex-ef4444));
+    background: linear-gradient(135deg, #F87171, #EF4444);
 }
 
 @keyframes counter-spin {
@@ -1407,7 +1407,7 @@ RIGHT
     width: 320px;
     height: 320px;
 
-    border: 1px solid var(--color-hex-efe1ca);
+    border: 1px solid #EFE1CA;
 
 }
 
@@ -1420,7 +1420,7 @@ RIGHT
 
     border-radius: 50%;
 
-    background: var(--color-white);
+    background: #fff;
 
     display: flex;
     align-items: center;
@@ -1432,7 +1432,7 @@ RIGHT
 
     box-shadow:
 
-        0 40px 80px var(--color-rgba-0-0-0--08);
+        0 40px 80px rgba(0, 0, 0, .08);
 
 }
 
@@ -1448,7 +1448,7 @@ RIGHT
     width: 42px;
     height: 42px;
 
-    background: var(--color-white);
+    background: #fff;
 
     transform: rotate(45deg);
 
@@ -1470,7 +1470,7 @@ RIGHT
 
     border-radius: 50%;
 
-    background: var(--color-hex-c18a43);
+    background: #C18A43;
 
     animation: pulse 1.5s infinite;
 
@@ -1509,7 +1509,7 @@ BACKGROUND BLURS
     width: 280px;
     height: 280px;
 
-    background: var(--color-hex-ffd79a);
+    background: #FFD79A;
 
     left: -120px;
     top: -80px;
@@ -1521,7 +1521,7 @@ BACKGROUND BLURS
     width: 250px;
     height: 250px;
 
-    background: var(--color-hex-ffe9c8);
+    background: #FFE9C8;
 
     right: -80px;
     bottom: -80px;
@@ -1535,7 +1535,7 @@ BACKGROUND BLURS
     width: 140px;
     height: 180px;
 
-    background-image: radial-gradient(var(--color-hex-ead8b8) 1.5px, transparent 1.5px);
+    background-image: radial-gradient(#ead8b8 1.5px, transparent 1.5px);
 
     background-size: 18px 18px;
 
@@ -1604,7 +1604,7 @@ CONTACT CARDS
 
 .contact-options {
     padding: 40px 0 90px;
-    background: var(--color-hex-fffdf8);
+    background: #FFFDF8;
 }
 
 .cards {
@@ -1623,9 +1623,9 @@ CONTACT CARDS
 
     position: relative;
 
-    background: var(--color-white);
+    background: #ffffff;
 
-    border: 1px solid var(--color-sand-bg);
+    border: 1px solid #EFE8DD;
 
     border-radius: 28px;
 
@@ -1636,7 +1636,7 @@ CONTACT CARDS
     overflow: hidden;
 
     box-shadow:
-        0 10px 35px var(--color-rgba-0-0-0--04);
+        0 10px 35px rgba(0, 0, 0, .04);
 
 }
 
@@ -1655,9 +1655,9 @@ CONTACT CARDS
     height: 4px;
 
     background: linear-gradient(90deg,
-            var(--color-hex-b87b35),
-            var(--color-hex-e3b16b),
-            var(--color-hex-b87b35));
+            #B87B35,
+            #E3B16B,
+            #B87B35);
 
     transform: scaleX(0);
 
@@ -1675,13 +1675,13 @@ CONTACT CARDS
 
 .card {
     position: relative;
-    background: var(--color-white);
-    border: 1px solid var(--color-sand-bg);
+    background: #ffffff;
+    border: 1px solid #EFE8DD;
     border-radius: 24px;
     padding: 22px 20px;
     transition: .45s cubic-bezier(.23, 1, .32, 1);
     overflow: hidden;
-    box-shadow: 0 8px 30px var(--color-rgba-0-0-0--03);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .03);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1690,8 +1690,8 @@ CONTACT CARDS
 
 .card:hover {
     transform: translateY(-8px);
-    border-color: var(--color-hex-e5d0af);
-    box-shadow: 0 20px 45px var(--color-rgba-185-128-48-0-14);
+    border-color: #E5D0AF;
+    box-shadow: 0 20px 45px rgba(185, 128, 48, 0.14);
 }
 
 /* ===========================
@@ -1701,22 +1701,22 @@ CONTACT CARDS
     width: 56px;
     height: 56px;
     border-radius: 18px;
-    background: var(--color-hex-1b1b1b);
+    background: #1B1B1B;
     /* Dark glossy charcoal */
-    color: var(--color-hex-e6c594);
+    color: #E6C594;
     /* Light elegant gold icon */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 12px;
     transition: transform 0.45s ease, background-color 0.45s ease, color 0.45s ease;
-    box-shadow: 0 6px 15px var(--color-rgba-0-0-0-0-12);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 .card:hover .card-icon {
-    background: var(--color-hex-c18a43);
+    background: #C18A43;
     /* Hover changes icon box to gold */
-    color: var(--color-white);
+    color: #FFFFFF;
     /* And white icon inside */
     transform: translateY(-3px) rotate(4deg);
 }
@@ -1734,7 +1734,7 @@ CONTACT CARDS
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--color-hex-c18a43);
+    color: #C18A43;
     margin-bottom: 4px;
     font-weight: 700;
 }
@@ -1742,7 +1742,7 @@ CONTACT CARDS
 .card h2 {
     font-size: 15px;
     font-weight: 700;
-    color: var(--color-hex-1f1f1f);
+    color: #1f1f1f;
     line-height: 1.3;
     margin-bottom: 4px;
     word-break: break-word;
@@ -1751,7 +1751,7 @@ CONTACT CARDS
 .card p {
     font-size: 13px;
     line-height: 1.5;
-    color: var(--color-hex-777);
+    color: #777;
     margin-bottom: 14px;
     min-height: 34px;
     /* Keeps buttons aligned if description wraps differently */
@@ -1771,19 +1771,19 @@ CONTACT CARDS
     font-size: 13px;
     font-weight: 700;
     transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border: 1px solid var(--color-hex-e2d5c1);
-    color: var(--color-hex-c18a43);
+    border: 1px solid #E2D5C1;
+    color: #C18A43;
     background: transparent;
     margin-top: auto;
     /* Push button to the bottom so they are perfectly aligned! */
 }
 
 .card-btn:hover {
-    background: var(--color-hex-c18a43);
-    color: var(--color-white) !important;
-    border-color: var(--color-hex-c18a43);
+    background: #C18A43;
+    color: #FFFFFF !important;
+    border-color: #C18A43;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px var(--color-rgba-193-138-67-0-2);
+    box-shadow: 0 8px 20px rgba(193, 138, 67, 0.2);
 }
 
 .card-btn svg {
@@ -1799,16 +1799,16 @@ CONTACT CARDS
 
 /* WhatsApp Button specific styles */
 .whatsapp-card .card-btn {
-    border-color: var(--color-hex-a3e9be);
-    color: var(--color-hex-2e7d32);
+    border-color: #A3E9BE;
+    color: #2E7D32;
     /* Rich dark green for better contrast */
 }
 
 .whatsapp-card .card-btn:hover {
-    background: var(--color-whatsapp);
-    border-color: var(--color-whatsapp);
-    color: var(--color-white) !important;
-    box-shadow: 0 8px 20px var(--color-rgba-37-211-102-0-2);
+    background: #25D366;
+    border-color: #25D366;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
 }
 
 .whatsapp-card .card-btn svg {
@@ -1839,7 +1839,7 @@ BACKGROUND SHINE
 
             transparent,
 
-            var(--color-rgba-255-255-255--7),
+            rgba(255, 255, 255, .7),
 
             transparent);
 
@@ -2106,8 +2106,8 @@ BACKGROUND SHINE
 /* --- FAQ Section Styles --- */
 .faq-section {
     padding: 100px 0;
-    background: var(--color-hex-faf9f6); /* Light, elegant luxury warm background */
-    border-top: 1px solid var(--color-sand-bg);
+    background: #FAF9F6; /* Light, elegant luxury warm background */
+    border-top: 1px solid #EFE8DD;
 }
 
 .small-container {
@@ -2124,30 +2124,30 @@ BACKGROUND SHINE
 .faq-section-title {
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--color-dark-1a);
+    color: #1A1A1A;
     margin: 10px 0 16px 0;
     letter-spacing: -0.02em;
 }
 
 .faq-section-subtitle {
     font-size: 1.1rem;
-    color: var(--color-hex-666666);
+    color: #666666;
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
 }
 
 .faq-whatsapp-link {
-    color: var(--color-hex-c18a43);
+    color: #C18A43;
     font-weight: 700;
     text-decoration: none;
-    border-bottom: 2px solid var(--color-rgba-193-138-67-0-2);
+    border-bottom: 2px solid rgba(193, 138, 67, 0.2);
     transition: all 0.3s ease;
 }
 
 .faq-whatsapp-link:hover {
-    border-bottom-color: var(--color-hex-c18a43);
-    color: var(--color-hex-a37130);
+    border-bottom-color: #C18A43;
+    color: #A37130;
 }
 
 .faq-accordion-list {
@@ -2157,22 +2157,22 @@ BACKGROUND SHINE
 }
 
 .faq-item {
-    background: var(--color-white);
-    border: 1px solid var(--color-sand-bg);
+    background: #FFFFFF;
+    border: 1px solid #EFE8DD;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 20px var(--color-rgba-0-0-0-0-01);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .faq-item:hover {
-    border-color: var(--color-hex-e5d0af);
-    box-shadow: 0 10px 30px var(--color-rgba-185-128-48-0-05);
+    border-color: #E5D0AF;
+    box-shadow: 0 10px 30px rgba(185, 128, 48, 0.05);
 }
 
 .faq-item.active {
-    border-color: var(--color-hex-c18a43);
-    box-shadow: 0 15px 35px var(--color-rgba-193-138-67-0-06);
+    border-color: #C18A43;
+    box-shadow: 0 15px 35px rgba(193, 138, 67, 0.06);
 }
 
 .faq-trigger {
@@ -2192,36 +2192,36 @@ BACKGROUND SHINE
 .faq-question {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--color-dark-1a);
+    color: #1A1A1A;
     transition: color 0.3s ease;
 }
 
 .faq-trigger:hover .faq-question,
 .faq-item.active .faq-question {
-    color: var(--color-hex-c18a43);
+    color: #C18A43;
 }
 
 .faq-arrow-icon {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: var(--color-hex-f7f2ea);
+    background: #F7F2EA;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-hex-c18a43);
+    color: #C18A43;
     flex-shrink: 0;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .faq-trigger:hover .faq-arrow-icon {
-    background: var(--color-hex-c18a43);
-    color: var(--color-white);
+    background: #C18A43;
+    color: #FFFFFF;
 }
 
 .faq-item.active .faq-arrow-icon {
-    background: var(--color-hex-c18a43);
-    color: var(--color-white);
+    background: #C18A43;
+    color: #FFFFFF;
     transform: rotate(180deg);
 }
 
@@ -2242,7 +2242,7 @@ BACKGROUND SHINE
 
 .faq-answer-content p {
     font-size: 1rem;
-    color: var(--color-hex-555555);
+    color: #555555;
     line-height: 1.6;
     padding: 0 32px 28px 32px;
     margin: 0;
@@ -2273,20 +2273,20 @@ BACKGROUND SHINE
 
 /* FAQ CTA Block Styles */
 .faq-cta-block {
-    background: var(--color-white);
-    border: 1px solid var(--color-sand-bg);
+    background: #FFFFFF;
+    border: 1px solid #EFE8DD;
     border-radius: 24px;
     padding: 40px 32px;
     text-align: center;
     margin-top: 48px;
-    box-shadow: 0 4px 20px var(--color-rgba-0-0-0-0-01);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
 }
 
 .faq-cta-text {
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 1.15rem;
-    color: var(--color-hex-666666);
+    color: #666666;
     margin: 0 0 24px 0;
 }
 
@@ -2295,8 +2295,8 @@ BACKGROUND SHINE
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: var(--color-hex-181818);
-    color: var(--color-white);
+    background: #181818;
+    color: #FFFFFF;
     border: none;
     padding: 14px 32px;
     border-radius: 100px;
@@ -2305,25 +2305,25 @@ BACKGROUND SHINE
     letter-spacing: 0.08em;
     text-decoration: none;
     transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 6px 20px var(--color-rgba-0-0-0-0-1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .faq-cta-btn .whatsapp-btn-icon,
 .faq-cta-btn .arrow-btn-icon {
-    color: var(--color-hex-e6c594) !important;
+    color: #E6C594 !important;
     transition: all 0.35s ease;
 }
 
 .faq-cta-btn:hover {
-    background: var(--color-hex-c18a43);
-    color: var(--color-white);
+    background: #C18A43;
+    color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px var(--color-rgba-193-138-67-0-25);
+    box-shadow: 0 10px 25px rgba(193, 138, 67, 0.25);
 }
 
 .faq-cta-btn:hover .whatsapp-btn-icon,
 .faq-cta-btn:hover .arrow-btn-icon {
-    color: var(--color-white) !important;
+    color: #FFFFFF !important;
 }
 
 .faq-cta-btn:hover .arrow-btn-icon {
@@ -2333,8 +2333,8 @@ BACKGROUND SHINE
 /* --- Final CTA Section Styles --- */
 .final-cta-section {
     padding: 100px 0 90px 0;
-    background: var(--color-hex-121212); /* Dark luxury charcoal */
-    border-top: 1px solid var(--color-rgba-255-255-255-0-05);
+    background: #121212; /* Dark luxury charcoal */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -2352,7 +2352,7 @@ BACKGROUND SHINE
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 1.15rem;
-    color: var(--color-hex-e6c594); /* Light gold */
+    color: #E6C594; /* Light gold */
     margin: 0 0 12px 0;
     letter-spacing: 0.01em;
 }
@@ -2360,7 +2360,7 @@ BACKGROUND SHINE
 .final-cta-title {
     font-size: 3.2rem;
     font-weight: 800;
-    color: var(--color-white);
+    color: #FFFFFF;
     margin: 0 0 16px 0;
     letter-spacing: -0.02em;
 }
@@ -2369,7 +2369,7 @@ BACKGROUND SHINE
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     font-style: italic;
     font-weight: 500;
-    color: var(--color-hex-e6c594);
+    color: #E6C594;
 }
 
 .dots-divider {
@@ -2384,7 +2384,7 @@ BACKGROUND SHINE
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: var(--color-hex-e6c594);
+    background: #E6C594;
     opacity: 0.5;
 }
 
@@ -2396,7 +2396,7 @@ BACKGROUND SHINE
 
 .final-cta-description {
     font-size: 1.1rem;
-    color: var(--color-rgba-255-255-255-0-7);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
     max-width: 680px;
     margin: 0 auto 40px auto;
@@ -2415,8 +2415,8 @@ BACKGROUND SHINE
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: var(--color-hex-e6c594);
-    color: var(--color-hex-121212) !important;
+    background: #E6C594;
+    color: #121212 !important;
     padding: 14px 32px;
     border-radius: 100px;
     font-size: 12px;
@@ -2424,13 +2424,13 @@ BACKGROUND SHINE
     letter-spacing: 0.08em;
     text-decoration: none;
     transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 6px 20px var(--color-rgba-230-197-148-0-15);
+    box-shadow: 0 6px 20px rgba(230, 197, 148, 0.15);
 }
 
 .cta-btn-gold:hover {
-    background: var(--color-white);
+    background: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px var(--color-rgba-255-255-255-0-2);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
 
 .cta-btn-gold svg {
@@ -2443,8 +2443,8 @@ BACKGROUND SHINE
     justify-content: center;
     gap: 10px;
     background: transparent;
-    color: var(--color-white);
-    border: 1px solid var(--color-rgba-255-255-255-0-2);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 14px 32px;
     border-radius: 100px;
     font-size: 12px;
@@ -2460,10 +2460,10 @@ BACKGROUND SHINE
 }
 
 .cta-btn-outline:hover {
-    border-color: var(--color-hex-e6c594);
-    color: var(--color-hex-e6c594);
+    border-color: #E6C594;
+    color: #E6C594;
     transform: translateY(-2px);
-    background: var(--color-rgba-230-197-148-0-05);
+    background: rgba(230, 197, 148, 0.05);
 }
 
 .cta-btn-outline:hover svg {
@@ -2489,14 +2489,14 @@ BACKGROUND SHINE
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--color-rgba-255-255-255-0-5);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.02em;
 }
 
 .trust-badge .badge-icon {
-    color: var(--color-hex-e6c594);
+    color: #E6C594;
     flex-shrink: 0;
 }
 
