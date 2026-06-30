@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="https://www.instagram.com/emergescale" target="_blank" rel="noopener" class="social-circle" aria-label="Instagram">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </a>
-                <a href="https://x.com/emergescale" target="_blank" rel="noopener" class="social-circle" aria-label="X (Twitter)">
+                <a href="https://x.com/emergescale" target="_blank" rel="noopener" class="social-circle" aria-label="X">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.73 16h4.27L8.28 4z"></path><path d="M20 4L4.3 20.7"></path></svg>
                 </a>
             </div>
