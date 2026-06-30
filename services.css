@@ -90,10 +90,10 @@ button {
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.85);
+    background: #000000;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 0.4rem 0.6rem;
     border-radius: 100px;
     display: flex;
@@ -108,7 +108,7 @@ button {
 
 .navbar-scrolled {
     width: auto;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     box-shadow: var(--shadow-lg);
     top: 1rem;
 }
@@ -130,7 +130,7 @@ button {
 .navbar-logo-img {
     width: 36px;
     height: 36px;
-    background: rgba(199, 154, 99, 0.12); /* Soft peach background box */
+    background: transparent; /* Transparent background box */
     border-radius: 12px;
     padding: 0;
     object-fit: contain;
@@ -140,7 +140,7 @@ button {
 .navbar-logo-text {
     font-size: 0.95rem;
     font-weight: 800;
-    color: #1E1E1E;
+    color: #FFFFFF;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -150,20 +150,19 @@ button {
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 50px;
-    color: var(--text-secondary);
+    color: rgba(255, 107, 0, 0.85); /* Orange inactive text */
     transition: var(--transition-fast);
 }
 
 .nav-item:hover {
-    color: var(--text-primary);
-    background: rgba(0, 0, 0, 0.03);
+    color: #FF6B00;
+    background: rgba(255, 107, 0, 0.08);
 }
 
 .nav-item.active {
     position: relative;
-    color: var(--text-primary);
-    background: #F2EBE1;
-    /* Soft sand active background */
+    color: #FF6B00;
+    background: rgba(255, 107, 0, 0.15); /* Orange capsule active background */
     font-weight: 700;
 }
 
@@ -175,7 +174,7 @@ button {
     transform: translateX(-50%);
     width: 24px;
     height: 3px;
-    background: #FF6B00; /* Vibrant brand orange active page indicator line */
+    background: #FFFFFF; /* White active page indicator line */
     border-radius: 100px;
 }
 
@@ -1003,7 +1002,7 @@ a[href^="mailto:"] .contact-option-detail {
         padding: 0;
         width: 24px;
         height: 24px;
-        color: #FF6B00;
+        color: #FFFFFF;
         transition: transform var(--transition-fast);
     }
     
