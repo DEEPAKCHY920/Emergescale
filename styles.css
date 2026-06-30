@@ -154,7 +154,7 @@ button {
     height: 36px;
     background: rgba(199, 154, 99, 0.12); /* Soft peach background box */
     border-radius: 12px;
-    padding: 6px;
+    padding: 0;
     object-fit: contain;
     flex-shrink: 0;
 }
