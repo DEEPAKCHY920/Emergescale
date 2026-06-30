@@ -81,22 +81,22 @@
 
 /* WhatsApp pill styling specifically for About button */
 .about-btn-whatsapp {
-    background: #181614;
-    color: #fff;
-    box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.15);
+    background: var(--color-dark-181);
+    color: var(--color-white);
+    box-shadow: 0 10px 24px -6px var(--color-rgba-0-0-0-0-15);
 }
 
 .about-btn-whatsapp:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.25);
-    background: #000;
+    box-shadow: 0 15px 30px -8px var(--color-rgba-0-0-0-0-25);
+    background: var(--color-black);
 }
 
 /* About Stats Banner */
 .about-stats-banner {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    background: #FFFFFF;
+    background: var(--color-white);
     padding: 3rem 0;
     margin-top: 2rem;
 }
@@ -280,21 +280,21 @@
 
 .why-us-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px -5px rgba(230, 126, 34, 0.22), 0 4px 12px rgba(230, 126, 34, 0.08); /* Orange glow shadow */
-    border-color: rgba(230, 126, 34, 0.35);
+    box-shadow: 0 12px 30px -5px var(--color-rgba-230-126-34-0-22), 0 4px 12px var(--color-rgba-230-126-34-0-08); /* Orange glow shadow */
+    border-color: var(--color-rgba-230-126-34-0-35);
 }
 
 .why-us-card-icon-wrapper {
     width: 44px;
     height: 44px;
     background: var(--text-primary);
-    color: #FFFFFF;
+    color: var(--color-white);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.8rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px var(--color-rgba-0-0-0-0-05);
 }
 
 .why-us-card-title {
@@ -342,8 +342,8 @@
 /* Our Story Section styling */
 .story-section {
     padding: 8rem 0;
-    background: radial-gradient(circle at 100% 100%, rgba(255, 92, 0, 0.02) 0%, var(--bg-color) 70%), 
-                radial-gradient(circle at 0% 0%, rgba(255, 92, 0, 0.01) 0%, var(--bg-color) 70%);
+    background: radial-gradient(circle at 100% 100%, var(--color-rgba-255-92-0-0-02) 0%, var(--bg-color) 70%), 
+                radial-gradient(circle at 0% 0%, var(--color-rgba-255-92-0-0-01) 0%, var(--bg-color) 70%);
 }
 
 .story-grid {
@@ -382,7 +382,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: #FFFFFF;
+    background: var(--color-white);
     border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
@@ -396,14 +396,14 @@
 
 .timeline-item:hover .timeline-icon-circle {
     transform: scale(1.1);
-    border-color: rgba(230, 126, 34, 0.5);
+    border-color: var(--color-rgba-230-126-34-0-5);
     color: var(--text-primary);
-    box-shadow: 0 0 15px rgba(230, 126, 34, 0.15);
+    box-shadow: 0 0 15px var(--color-rgba-230-126-34-0-15);
 }
 
 .timeline-card {
     flex-grow: 1;
-    background: #FFFFFF;
+    background: var(--color-white);
     border: 1px solid var(--border-color);
     border-radius: 18px;
     padding: 1.6rem 2rem;
@@ -414,8 +414,8 @@
 
 .timeline-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px -5px rgba(230, 126, 34, 0.18), 0 4px 12px rgba(230, 126, 34, 0.05); /* Orange hover shadow */
-    border-color: rgba(230, 126, 34, 0.3);
+    box-shadow: 0 12px 30px -5px var(--color-rgba-230-126-34-0-18), 0 4px 12px var(--color-rgba-230-126-34-0-05); /* Orange hover shadow */
+    border-color: var(--color-rgba-230-126-34-0-3);
 }
 
 .timeline-card-year {
@@ -506,7 +506,7 @@
 .story-stats-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background: #FFFFFF;
+    background: var(--color-white);
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 2.2rem 1.2rem;
@@ -517,8 +517,8 @@
 
 .story-stats-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 16px 36px -8px rgba(230, 126, 34, 0.16), 0 4px 12px rgba(230, 126, 34, 0.05); /* Orange hover shadow */
-    border-color: rgba(230, 126, 34, 0.28);
+    box-shadow: 0 16px 36px -8px var(--color-rgba-230-126-34-0-16), 0 4px 12px var(--color-rgba-230-126-34-0-05); /* Orange hover shadow */
+    border-color: var(--color-rgba-230-126-34-0-28);
 }
 
 .story-stats-card .story-stat-item {
@@ -643,21 +643,21 @@
 
 .purpose-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px -5px rgba(230, 126, 34, 0.22), 0 4px 12px rgba(230, 126, 34, 0.08); /* Orange glow shadow */
-    border-color: rgba(230, 126, 34, 0.35);
+    box-shadow: 0 12px 30px -5px var(--color-rgba-230-126-34-0-22), 0 4px 12px var(--color-rgba-230-126-34-0-08); /* Orange glow shadow */
+    border-color: var(--color-rgba-230-126-34-0-35);
 }
 
 .purpose-card-icon-wrapper {
     width: 48px;
     height: 48px;
     background: var(--text-primary);
-    color: #FFFFFF;
+    color: var(--color-white);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.8rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px var(--color-rgba-0-0-0-0-05);
 }
 
 .purpose-card-title {
@@ -783,21 +783,21 @@
 
 .values-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px -5px rgba(230, 126, 34, 0.22), 0 4px 12px rgba(230, 126, 34, 0.08); /* Orange glow shadow */
-    border-color: rgba(230, 126, 34, 0.35);
+    box-shadow: 0 12px 30px -5px var(--color-rgba-230-126-34-0-22), 0 4px 12px var(--color-rgba-230-126-34-0-08); /* Orange glow shadow */
+    border-color: var(--color-rgba-230-126-34-0-35);
 }
 
 .values-card-icon-wrapper {
     width: 40px;
     height: 40px;
     background: var(--text-primary);
-    color: #FFFFFF;
+    color: var(--color-white);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px var(--color-rgba-0-0-0-0-05);
 }
 
 .values-card-title {
@@ -901,8 +901,8 @@
 
 .founder-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 45px -5px rgba(230, 126, 34, 0.22), 0 8px 24px rgba(230, 126, 34, 0.08); /* Orange glow shadow */
-    border-color: rgba(230, 126, 34, 0.35);
+    box-shadow: 0 20px 45px -5px var(--color-rgba-230-126-34-0-22), 0 8px 24px var(--color-rgba-230-126-34-0-08); /* Orange glow shadow */
+    border-color: var(--color-rgba-230-126-34-0-35);
 }
 
 .founder-avatar-container {
@@ -914,7 +914,7 @@
     width: 96px;
     height: 96px;
     background: var(--text-primary);
-    color: #FFFFFF;
+    color: var(--color-white);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -930,8 +930,8 @@
     right: 3px;
     width: 18px;
     height: 18px;
-    background: #25D366;
-    border: 3.5px solid #FFFFFF;
+    background: var(--color-whatsapp);
+    border: 3.5px solid var(--color-white);
     border-radius: 50%;
 }
 
@@ -1012,9 +1012,9 @@
 .founder-socials a:hover {
     background: var(--accent-color);
     border-color: var(--accent-color);
-    color: #FFFFFF;
+    color: var(--color-white);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(199, 154, 99, 0.2);
+    box-shadow: 0 4px 12px var(--color-rgba-199-154-99-0-2);
 }
 
 /* Our Process (How We Work) Section styling */
@@ -1108,7 +1108,7 @@
     width: 32px;
     height: 32px;
     background: var(--text-primary);
-    color: #FFFFFF;
+    color: var(--color-white);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1138,7 +1138,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1.2rem;
-    border: 1px solid rgba(199, 154, 99, 0.15);
+    border: 1px solid var(--color-rgba-199-154-99-0-15);
 }
 
 .process-step-title {
