@@ -771,6 +771,9 @@ a[href^="mailto:"] .contact-option-detail {
 
 .footer-logo-card {
     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 76px;
     height: 76px;
     background: #FFFFFF;
@@ -787,7 +790,7 @@ a[href^="mailto:"] .contact-option-detail {
 }
 
 .footer-logo-card:hover {
-    transform: scale(1.05);
+    transform: translate(-50%, -50%) scale(1.05);
     box-shadow: 0 15px 40px rgba(199, 154, 99, 0.15);
 }
 
@@ -942,7 +945,7 @@ a[href^="mailto:"] .contact-option-detail {
         transform: scaleY(2);
     }
     .footer-logo-card {
-        margin-top: -2rem;
+        margin-top: 0;
     }
 }
 /* Mobile Devices */
@@ -1070,7 +1073,7 @@ a[href^="mailto:"] .contact-option-detail {
     .footer-logo-card {
         width: 70px;
         height: 70px;
-        margin-top: -1.2rem;
+        margin-top: 0;
     }
 
     .footer-copyright-left,
